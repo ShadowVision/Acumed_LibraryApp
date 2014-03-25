@@ -63,6 +63,26 @@
             padding:0;
         }
     </style>
+    <meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0"><script src="phonegap.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready",
+                function(){
+                    document.write (
+                            [
+                                "device.name",
+                                "device.platform",
+                                "device.model",
+                                "device.version",
+                            ].map(
+                                    function(s){
+                                        return  s + ' = ' + eval(s);
+                                    }
+                            ).join("<br>\n")
+                    );
+                }
+                , false);
+
+    </script>
 </head>
 <div id="library">
     <div class="libraryHeader">
