@@ -1,0 +1,65 @@
+doctype html
+
+html
+    head
+        title= title
+        base
+        link(rel="stylesheet" href="assets/fonts/webfontkit-20140120-153302/stylesheet.css" type="text/css" charset="utf-8")
+        | <style type='text/css'>
+        include reset.css
+        include MyFontsWebfontsKit.css
+        include font-family-sanchez.css
+        include index.css
+        include design.css
+        include main.css
+        include style.css
+        | </style>
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name="format-detection", content="telephone=no")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0")
+        script(src="phonegap.js")
+        script(src="js/index.js")
+    body.medium
+        include ../views/nav
+        include ../views/settings
+        include ../views/header
+        include ../views/footer
+        include ../views/image
+        include ../views/log
+        audio(id="audio" class="audio" src="" autoplay="autoplay")
+        div#outer.outer
+            div#inner.inner
+                include ../views/title
+                include ../views/books/slic/content/about/index.html
+                include ../views/books/slic/content/treatment/index.html
+                include ../views/books/slic/content/presurgical/index.html
+                include ../views/books/slic/content/targeting/content/1-PREP_PACK.html
+                include ../views/books/slic/content/targeting/content/2-REDUCTION_AND_PLACEMENT_OF_THE_SL_TARGETING GUIDE.html
+                include ../views/books/slic/content/targeting/content/3-ASSEMBLE_SL_TARGETING_GUIDE.html
+                include ../views/books/slic/content/targeting/content/4-PLACE_SL_TARGETING_GUIDE_ON WRIST.html
+                include ../views/books/slic/content/targeting/content/5-DISI_CORRECTION.html
+                include ../views/books/slic/content/targeting/content/6-PLACING_THE_GUIDE_WIRE_ACROSS_THE_SCAPHOID_AND_LUNATE.html
+                include ../views/books/slic/content/targeting/content/7-LATERAL_VIEW_ALIGNMENT.html
+                include ../views/books/slic/content/targeting/content/8-PA_VIEW_ALIGNMENT.html
+                include ../views/books/slic/content/targeting/content/9-FINAL_CONFIRMATION.html
+                include ../views/books/slic/content/technique/content/1.html
+                include ../views/books/slic/content/technique/content/2.html
+                include ../views/books/slic/content/technique/content/3.html
+                include ../views/books/slic/content/technique/content/4.html
+                include ../views/books/slic/content/technique/content/5.html
+                include ../views/books/slic/content/technique/content/6.html
+                include ../views/books/slic/content/technique/content/7.html
+                include ../views/books/slic/content/technique/content/8.html
+                include ../views/books/slic/content/ordering/index.html
+        | <script>
+        include assets/javascripts/util.js
+        include assets/javascripts/content.js
+        include assets/javascripts/nav.js
+        include assets/javascripts/swipe.js
+        include assets/javascripts/media.js
+        include assets/javascripts/events.js
+        include assets/javascripts/prefs.js
+        include assets/javascripts/image.js
+        include assets/javascripts/main.js
+        | </script>

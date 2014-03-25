@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2718214, 2014-01-05T18:34:32-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Sanchez Slab Italic by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/sanchez-slab/italic/
+ * 
+ * Webfont: Sanchez Slab by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/sanchez-slab/regular/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2718214
+ * Licensed pageviews: Unlimited
+ * Webfonts copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+@font-face {
+    font-family: 'SanchezSlab-Italic';
+    src: url(assets/fonts/webfonts/297A06_0_0.eot);
+    src: url(assets/fonts/webfonts/297A06_0_0.eot?#iefix) format('embedded-opentype'),
+    url(assets/fonts/webfonts/297A06_0_0.woff) format('woff'),
+    url(assets/fonts/webfonts/297A06_0_0.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SanchezSlab';
+    src: url(assets/fonts/webfonts/297A06_1_0.eot);
+    src: url(assets/fonts/webfonts/297A06_1_0.eot?#iefix) format('embedded-opentype'),
+    url(assets/fonts/webfonts/297A06_1_0.woff) format('woff'),
+    url(assets/fonts/webfonts/297A06_1_0.ttf) format('truetype');
+}
+ 

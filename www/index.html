@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acumed Library</title>
+    <style type='text/css'>
+        html{
+            background:url('assets/LibraryGraphics/libraryBg.png')	no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+        #library{
+            margin:0;
+            padding:0;
+        }
+        .libraryHeader{
+            background:url('assets/LibraryGraphics/libraryHeader.png') repeat-x;
+            height:60px;
+            width:100%;
+            background-size:1px 100%;
+            padding-top:30px;
+            margin:0;
+        }
+        #libraryTitle{
+            background:url('assets/LibraryGraphics/libraryTitle.png') no-repeat;
+            background-size:contain;
+            float:left;
+            width:400px;
+            height:80px;
+            margin:15px 0 0 20px;
+        }
+        #librarySettingsBtn{
+            background:url('assets/LibraryGraphics/librarySettingsBtn.png') no-repeat;
+            background-size:contain;
+            float:right;
+            width:30px;
+            height:30px;
+            margin:15px 40px 25px 0px;
+        }
+        .libraryFooter{
+            background:url('assets/LibraryGraphics/libraryFooter.png') repeat-x;
+            position:fixed;
+            bottom:0px;
+            height:30px;
+            width:100%;
+            background-size:1px 100%;
+            padding-top:30px;
+        }
+        #apps{
+            clear: both;
+            padding: 0 0 0 30px;
+            height:100%;
+        }
+        #apps img{
+            float:left;
+            width:120px;
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<div id="library">
+    <div class="libraryHeader">
+        <div id="libraryTitle"></div>
+        <div id="librarySettingsBtn"></div>
+    </div>
+
+    <div id="apps">
+        <a href="slicIndex.html"><img src="assets/LibraryGraphics/SLIC_Icon.png" /> </a>
+    </div>
+
+    <div class="libraryFooter">
+
+    </div>
+</div>
+</html>

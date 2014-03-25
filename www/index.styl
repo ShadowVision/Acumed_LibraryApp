@@ -1,0 +1,658 @@
+bar-height = 3rem
+font-size = 1rem
+full = 99.9%
+
+//FROM DESIGN
+acumed-blue = #00B2EE
+acumed-gold = #E8B012
+acumed-grey = #CCCCCC
+
+//FROM THEIR NEW SITE
+acumed-gold = #f9c72f
+acumed-grey = #BEBCB5
+acumed-blue = #00a7e1
+
+acumed-gray = acumed-grey
+
+smoke = rgba(0,0,0,0.35)
+highlight = rgba(255,255,255,0.22)
+
+emboss = 0.25rem
+spread = 0.75rem
+
+*
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+a
+  color acumed-blue
+
+h1, h2, h3, h4
+  color acumed-blue
+  display block
+  -webkit-margin-before 0
+  -webkit-margin-after 0
+  -webkit-margin-start 0
+  -webkit-margin-end 0
+  font-weight bold
+  font-size 1.1em
+
+img
+  width: 100%
+  border none
+
+h1, h2
+  font-size 1.1em
+  @media screen and (min-width: 600px)
+    font-size 1.2em
+
+#header
+  top 0
+  left 0
+  right 0
+  position fixed
+  width 100%
+  height 3rem
+  background black
+  color white
+  > *
+    top 0
+  #title
+    position absolute
+    left 6rem
+    top 0
+    height auto
+    line-height 3rem
+    color #fff
+    font-size 1rem
+    vertical-align middle
+    @media screen and (min-width: 600px)
+      left 13rem
+
+#settings
+  display none
+  position absolute
+  top -9999px
+  right 0
+
+#menu
+  display none
+  left 0
+
+  overflow-x hidden
+  overflow-y scroll
+
+  /*max-height calc(100% - 6rem)*/
+  padding-bottom 3rem
+
+  button
+    height auto
+    text-align right
+    vertical-align bottom
+    position: relative
+    padding-left 3em
+    > *
+      color white
+      vertical-align bottom
+    background-repeat no-repeat
+    background-position 0 75%
+    background-size 3em
+
+body.settings #settings.nav
+  top 3rem
+  display block
+
+body.menu #menu.nav
+  top 3rem
+  display block
+
+
+#set-zoom-small
+  background-image url(assets/images/font-small-icon.svg)
+#set-zoom-medium
+  background-image url(assets/images/font-medium-icon.svg)
+#set-zoom-large
+  background-image url(assets/images/font-large-icon.svg)
+
+.small #settings.nav .inner #set-zoom-small
+  background-color #999
+
+.medium #settings.nav .inner #set-zoom-medium
+  background-color #999
+
+.large #settings.nav .inner #set-zoom-large
+  background-color #999
+
+#settings.nav
+#menu.nav
+  position absolute
+  top calc(-200%)
+  box-shadow 0 0 1em rgba(0, 0, 0, 0.5)
+  background black
+  min-width 10%
+  max-width 80%
+  max-height calc(100% - 6em)
+  z-index 100
+  margin-bottom bar-height
+  transition all 0.3s;
+  overflow-x hidden
+  overflow-y scroll
+  .inner
+    button
+      background-color #333333
+      margin-top 1px
+      padding 1em
+    div
+      color white
+      padding 1em
+
+#settings.nav
+  right 0
+
+#menu.nav
+  left 0
+
+#menu.nav
+  .inner
+    button
+    a
+    a:active
+    a:hover
+    a:focus
+    a:visited
+    div
+      text-decoration none
+      color white
+      display block
+      margin-top 1px
+      padding 1em
+    a
+      background-color #333
+    a.highlight
+      background-color #666
+
+    button
+      width: 100%
+    div
+      background-color black
+
+body
+  overflow hidden
+  width 99.99%
+  height 99.99%
+
+#outer
+  position relative
+  overflow-x hidden
+
+  overflow-y hidden
+  width 100%
+  height calc(100% - 6rem)
+
+#inner
+  height calc(100%)
+  width 81920px
+  overflow hidden
+  transition: translate3d(0,0,0)
+  /*transition: -webkit-transform 300ms;*/
+
+div[data-role="page"]
+  position relative
+  width 100%
+  height calc(100%)
+  /*min-height 30em*/
+  display inline
+  float left
+  overflow-y scroll
+  opacity 1
+
+button,
+.button
+  height bar-height
+  width auto
+  min-width bar-height
+  color white
+  text-transform uppercase
+
+.tangible
+  @extend button
+  -moz-box-shadow    inset 0 0 emboss highlight
+  -webkit-box-shadow inset 0 0 emboss highlight
+  box-shadow         inset 0 0 emboss highlight
+  border 1px solid rgba(128,128,128,0.5)
+
+.active
+  @extend button
+  -moz-box-shadow    inset 0 0 spread smoke
+  -webkit-box-shadow inset 0 0 spread smoke
+  box-shadow         inset 0 0 spread smoke
+  background-color acumed-gold
+
+
+html
+  zoom 1
+  padding 0
+  margin 0
+
+body
+  padding 0
+  margin 0
+  overflow hidden
+  font font-size "Proxima Nova", "PROXIMA NOVA (TT) REGULAR", "Proxima Nova Regular" "Lucida Grande", Helvetica, Arial, sans-serif
+  background white
+  width 99.9%
+  height 99.9%
+
+  div
+    font-size 14px
+    line-height 14px
+    @media screen and (min-width: 600px)
+      font-size 18px
+      line-height 24px
+
+#log
+  display none
+  border 1px inset silver
+  background rgba(0,0,0,0.85)
+  color gold
+  position fixed
+  left 3rem
+  top 3rem
+  width 50%
+  height 50%
+  overflow scroll
+  font-size 7px
+  z-index 50
+
+#header, #footer
+  height bar-height
+  overflow hidden
+  box-shadow 0 0 1em rgba(0, 0, 0, 0.5)
+  z-index 1000
+  position fixed
+  width full
+  h1, h2, h3, h4
+    position relative
+    text-align center
+    font-size 1.1em
+    @media screen and (min-width: 600px)
+      font-size 1.25em
+  a
+    width bar-height
+    height bar-height
+    background-color acumed-blue
+    color white
+
+#footer
+  position fixed
+  bottom 0
+  left 0
+  right 0
+  width 100%
+  height 3rem
+  color white
+  background-color acumed-blue
+  border-bottom 5px solid acumed-gold
+
+@media screen and (orientation: portrait)
+  section
+    width 60%
+    float left
+    padding-bottom 4rem
+
+    > figure
+      max-height 50%
+      display block
+      margin 0 auto
+      float none
+      width 90%
+      img
+        max-width 90%
+
+    article
+      width 100%
+      display block
+      float none
+
+      h1, p
+        padding 0.5rem 0.5rem 0
+        @media screen and (min-width: 600px)
+          padding 2rem 2rem 0
+
+@media screen and (orientation: landscape)
+  section
+    width 60%
+    float left
+    padding-bottom 4rem
+
+    > figure
+      width 45%
+      max-height 50%
+      float left
+      display block
+      margin 0 auto
+      img
+        max-width 90%
+
+    article
+      width 55%
+      display inline-block
+      float left
+
+      h1, p
+        padding 0.5rem 0.5rem 0
+        @media screen and (min-width: 600px)
+          padding 2rem 2rem 0
+
+
+aside
+  background-color black
+  width 40%
+  min-height 40em
+  position absolute
+  right 0
+  top 0
+  padding-bottom 3rem
+
+  blockquote
+    padding 0.5rem
+    color white
+    background-color acumed-blue
+    @media screen and (min-width: 600px)
+      padding 2rem
+  img
+    margin 0 0 -3px 0
+    @media screen
+      @media (orientation: portrait)
+        max-width: 100%
+      @media (orientation: landscape)
+        max-width: 33%
+      @media screen and (min-width: 600px)
+        margin 0 0 -6px 0
+  ul
+    font-size 1em
+    padding 0.5rem
+    margin-bottom 0.5em
+    background-color acumed-gray
+    @media screen and (min-width: 600px)
+      font-size 1.1em
+      padding 2rem
+      margin-bottom 4em
+    h1
+      color black
+
+  .nav
+    position: absolute
+    bottom 0
+    right 0
+
+
+.center-content
+  position absolute
+  top 0
+  left 50%
+
+  -webkit-transform: translate(-50%)
+  transform: translate(-50%)
+  text-align center
+  margin 0 auto
+  background-color acumed-blue
+  z-index 100
+
+.Blank-Image
+  width: 44%;
+  float: left;
+  clear: both;
+  margin: 0 0 2em 0;
+  border: 0px solid #ddd;
+
+.Basic-Image
+  max-width: 45%
+  max-height: 45%
+  margin 0
+  border none
+  float left
+  @media screen and (min-width:600px)
+    width: 50%;
+    margin: 0 1em 1em 0;
+  img
+    max-width: 100%;
+    max-height: 66%;
+    text-align: center;
+    margin-bottom:1em;
+
+    @media screen and (min-width:600px)
+      max-height: 66%;
+
+.Basic-Text-Frame
+  clear both
+  @media screen and (min-width:600px)
+    float left
+    width 45%
+    clear none
+
+.Title-Text-Frame
+  clear both
+  width 100%
+  @media screen and (min-width:400px)
+    float right
+    width 55%
+  @media screen and (min-width:600px)
+    margin-left 45%
+    width 55%
+
+
+.left-content, .right-content
+  width 28%
+  position fixed
+  bottom 0
+  text-align center
+/*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
+.left-content
+  left 0
+
+.right-content
+  right 0
+
+span.body-copy-bold
+  font-size: 1em;
+  font-style: normal;
+  font-weight: bold;
+.Basic-Paragraph
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+.small .Basic-Paragraph
+  font-size: 0.85em;
+.large .Basic-Paragraph
+  font-size: 1.25em;
+
+
+span.drop-cap
+  color #A5A39E
+  float left
+  display block
+
+  font-size 5em
+  font-style normal
+  font-weight normal
+  line-height 1
+  margin-bottom 0
+  margin-right 0
+  margin-top -0.1em
+  width 1em
+  text-align center
+  height 1em
+  overflow hidden
+  font-family sanchez_slab_blackblack, SanchezSlab, "Sanchez Slab Black", "Sanchez Slab", "Sanchez Slab Std", "Sanchez", "Trebuchet MS",serif
+  @media screen and (min-width: 600px)
+    float left
+    display inline
+
+#closeImageZoom
+  z-index: 10000;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  background-color: rgba(0,0,0,0.95);
+  text-align: center;
+  font-size: 2em;
+
+#smoke
+  visibility hidden
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 99.9%;
+  height: 99.9%;
+  /*background-color: rgba(0,0,0,0.75);*/
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+.image-zoom
+  #smoke
+  #image
+    visibility visible
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment:fixed;
+
+#closeZoomImage
+  /*background-color rgba(0,0,0,0.9)*/
+  text-align center
+  /*font-size 2em*/
+  /*width 3em*/
+  /*height 3em*/
+  /*line-height 3em*/
+  /*color white*/
+  /*background-color rgba(0,0,0,0.9)*/
+  padding 1em
+  position: absolute;
+  top: 0;
+  left: 0;
+  img
+    width: 48px
+    height: 48px
+
+#image
+  visibility hidden
+  width 100%
+  height 100%
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+.icon
+  @extend .tangible
+  display inline-block
+  background-size contain
+  background-repeat no-repeat
+  span
+  display: inline
+
+//@media only screen and (max-device-width : 768px)
+//.edge-icon
+//span
+//display: none
+#footer #prev-icon
+#footer #next-icon
+  @extend .icon
+  border none
+  text-align center
+  width 100%
+  position relative
+  background-position-x 50%
+
+#footer #next-icon
+  background-image: url(assets/images/next-icon.svg)
+#footer #prev-icon
+  background-image: url(assets/images/prev-icon.svg)
+
+.first #prev-icon
+  visibility hidden
+.last #next-icon
+  visibility hidden
+
+.media-icon
+  @extend .icon
+  visibility : hidden
+
+.sound .media-icon
+  @extend .media-icon
+  visibility : visible
+
+#play-icon
+  @extend .media-icon
+  background-image: url(assets/images/play-icon.svg)
+
+.sound #play-icon
+  @extend .sound .media-icon
+
+#autoplay-icon
+  @extend .media-icon
+  background-image: url(assets/images/autoplay-icon.svg)
+
+.sound.autoplay #autoplay-icon
+  @extend .active
+  @extend .sound .media-icon
+
+.sound #autoplay-icon
+  @extend .sound .media-icon
+
+#restart-icon
+  @extend .media-icon
+  background-image: url(assets/images/restart-icon.svg)
+
+.sound #restart-icon
+  @extend .sound .media-icon
+
+.playing #play-icon
+  @extend #play-icon
+  background-image: url(assets/images/pause-icon.svg)
+
+#sound-icon
+  @extend .media-icon
+  background-image: url(assets/images/sound-icon.svg)
+
+#menu-icon
+  @extend .icon
+  background-image: url(assets/images/menu-icon.svg)
+  position absolute
+  top 0
+  left 0
+
+#font-size-icon
+  @extend .icon
+  background-image: url(assets/images/fontsize-icon.svg)
+  position absolute
+  top 0
+  right 0
+
+#acumed-logo-icon
+  position absolute
+  top 0
+  left 3rem
+  height 3rem
+  width 3rem
+  background-image: url(assets/images/acumed-reticle-icon.svg)
+  background-size contain
+  background-repeat no-repeat
+  color gold
+
+  @media screen and (min-width: 600px)
+    width 100%
+    left 0
+    background-image: url(assets/images/acumed-logo-icon.svg)
+    text-align: left
+    margin-left: 3rem
+    line-height: 3rem
+
