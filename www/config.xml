@@ -46,10 +46,10 @@
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
-    <icon src="icon-57.png" />
-    <icon src="icon-57-2x.png" />
-    <icon src="icon-72.png" />
-    <icon src="icon-72-2x.png" />
+    <icon src="icon-57.png" gap:platform="ios" height="57" width="57"/>
+    <icon src="icon-57-2x.png" gap:platform="ios" height="114" width="114" />
+    <icon src="icon-72.png" gap:platform="ios" height="72" width="114"/>
+    <icon src="icon-72-2x.png" gap:platform="ios" height="144" width="144"/>
 
     <!-- Define app splash screen for each platform. -->
 
