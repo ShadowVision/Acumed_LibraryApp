@@ -230,8 +230,6 @@ button,
 }
 .tangible,
 .icon,
-#footer #prev-icon,
-#footer #next-icon,
 .media-icon,
 .sound .media-icon,
 #play-icon,
@@ -682,9 +680,11 @@ span
 }
 #footer #next-icon {
   background-image: url("assets/images/next-icon.svg");
+  background-color: transparent;
 }
 #footer #prev-icon {
   background-image: url("assets/images/prev-icon.svg");
+  background-color: transparent;
 }
 .first #prev-icon {
   visibility: hidden;
