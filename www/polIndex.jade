@@ -1,0 +1,81 @@
+doctype html
+
+html
+    head
+        title= title
+        base
+        link(rel="stylesheet" href="assets/fonts/webfontkit-20140120-153302/stylesheet.css" type="text/css" charset="utf-8")
+        | <style type='text/css'>
+        include reset.css
+        include MyFontsWebfontsKit.css
+        include font-family-sanchez.css
+        include index.css
+        include design.css
+        include main.css
+        include style.css
+        | </style>
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name="format-detection", content="telephone=no")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0")
+        script(src="phonegap.js")
+        script(src="js/index.js")
+    body.medium
+        include ../views/polNav.html
+        include ../views/settings.html
+        include ../views/header.html
+        include ../views/footer.html
+        include ../views/image.html
+        include ../views/log.html
+        audio(id="audio" class="audio" src="" autoplay="autoplay")
+        div#outer.outer
+            div#inner.inner
+                include ../views/books/polarus/title.html
+                include ../views/books/polarus/plates/1.html
+                include ../views/books/polarus/plates/2.html
+                include ../views/books/polarus/plates/3.html
+                include ../views/books/polarus/plates/4.html
+                include ../views/books/polarus/plates/5.html
+                include ../views/books/polarus/plates/6.html
+                include ../views/books/polarus/plates/7.html
+                include ../views/books/polarus/plates/8.html
+                include ../views/books/polarus/plates/9.html
+                include ../views/books/polarus/plates/10.html
+                include ../views/books/polarus/plates/11.html
+                include ../views/books/polarus/plates/12.html
+                include ../views/books/polarus/proximalNails/1.html
+                include ../views/books/polarus/proximalNails/2.html
+                include ../views/books/polarus/proximalNails/3.html
+                include ../views/books/polarus/proximalNails/4.html
+                include ../views/books/polarus/proximalNails/5.html
+                include ../views/books/polarus/proximalNails/6.html
+                include ../views/books/polarus/proximalNails/7.html
+                include ../views/books/polarus/proximalNails/8.html
+                include ../views/books/polarus/proximalNails/9.html
+                include ../views/books/polarus/proximalNails/10.html
+                include ../views/books/polarus/proximalNails/11.html
+                include ../views/books/polarus/proximalNails/12.html
+                include ../views/books/polarus/proximalNails/13.html
+                include ../views/books/polarus/distalNails/1.html
+                include ../views/books/polarus/distalNails/2.html
+                include ../views/books/polarus/distalNails/3.html
+                include ../views/books/polarus/distalNails/4.html
+                include ../views/books/polarus/distalNails/5.html
+                include ../views/books/polarus/distalNails/6.html
+                include ../views/books/polarus/distalNails/7.html
+                include ../views/books/polarus/distalNails/8.html
+                include ../views/books/polarus/distalNails/9.html
+                include ../views/books/polarus/distalNails/10.html
+                include ../views/books/polarus/distalNails/11.html
+        | <script>
+        include assets/javascripts/util.js
+        include assets/javascripts/polContent.js
+        include assets/javascripts/nav.js
+        include assets/javascripts/swipe.js
+        include assets/javascripts/media.js
+        include assets/javascripts/events.js
+        include assets/javascripts/prefs.js
+        include assets/javascripts/image.js
+        include assets/javascripts/main.js
+        | </script>
+
