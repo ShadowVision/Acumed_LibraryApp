@@ -16,6 +16,7 @@
   overflow: hidden;
   hyphens: none;
   -moz-hyphens: none;
+  -ms-hypens: none;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -27,11 +28,8 @@ menu,
 dir {
   display: block;
   list-style-type: none;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
+  margin: 0;
+  padding: 0;
 }
 :focus {
   outline: none;
