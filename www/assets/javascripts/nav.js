@@ -79,7 +79,8 @@
     x = -(this.currentPage.index * width);
     style = "";
     if (window.moving) {
-      style = "transition: -webkit-transform 300ms; -moz-transform 300ms";
+        style = "transition: -webkit-transform 300ms;";
+        style +="transition: -moz-transform 300ms;"
     }
     style += "-webkit-transform: translate3d( " + x + "px ,0,0); -moz-transform:translate3d( " + x + "px,0,0)";
     return inner.setAttribute("style", style);
