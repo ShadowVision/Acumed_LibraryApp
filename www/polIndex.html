@@ -79,9 +79,8 @@ dir {
   font-family: 'Sanchez';
   font-style: normal;
   font-weight: 400;
-  src: local('Sanchez'), local('Sanchez-Regular'), url(fonts/sanchez/9T6om-IyqE2CuKLLQr0lcgLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-* {
+  src: local('Sanchez'), local('Sanchez-Regular'), url('assets/fonts/sanchez/9T6om-IyqE2CuKLLQr0lcgLUuEpTyoUstqEm5AMlJo4.woff') format('woff');
+}* {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -313,8 +312,6 @@ button,
 }
 .tangible,
 .icon,
-#footer #prev-icon,
-#footer #next-icon,
 .media-icon,
 .sound .media-icon,
 #play-icon,
@@ -765,9 +762,11 @@ span
 }
 #footer #next-icon {
   background-image: url("assets/images/next-icon.svg");
+  background-color: transparent;
 }
 #footer #prev-icon {
   background-image: url("assets/images/prev-icon.svg");
+  background-color: transparent;
 }
 .first #prev-icon {
   visibility: hidden;
@@ -867,6 +866,7 @@ table {
 body {
     -epub-hyphens: auto;
     -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 @page {
@@ -2459,6 +2459,7 @@ aside nav {
     top: 0;
     left: 50%;
     -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
     text-align: center;
     margin: 0 auto;
     background-color: #00a7e1;
@@ -2814,7 +2815,7 @@ nav .inner button {
 nav .inner div {
     background-color: #000;
 }
-</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0"><script src="phonegap.js"></script><script src="js/index.js"></script></head><body class="medium"><div id="menu" class="nav">
+</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" charset="utf-8"><script src="phonegap.js"></script><script src="js/index.js"></script></head><body class="medium"><div id="menu" class="nav">
     <div class="inner">
         <a href="#title">Introducing The System</a>
 
@@ -7824,9 +7825,9 @@ Polarus&reg; C Long T15 Hexalobe Driver
     x = -(this.currentPage.index * width);
     style = "";
     if (window.moving) {
-      style = "transition: -webkit-transform 300ms;";
+      style = "transition: -webkit-transform 300ms; -moz-transform 300ms";
     }
-    style += "-webkit-transform: translate3d( " + x + "px ,0,0)";
+    style += "-webkit-transform: translate3d( " + x + "px ,0,0); -moz-transform:translate3d( " + x + "px,0,0)";
     return inner.setAttribute("style", style);
   };
 

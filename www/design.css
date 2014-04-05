@@ -21,6 +21,7 @@ table {
 body {
     -epub-hyphens: auto;
     -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 @page {

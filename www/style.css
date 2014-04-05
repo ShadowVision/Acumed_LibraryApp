@@ -189,6 +189,7 @@ aside nav {
     top: 0;
     left: 50%;
     -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
     text-align: center;
     margin: 0 auto;
     background-color: #00a7e1;
