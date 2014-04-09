@@ -11,15 +11,18 @@
     id = e.target.id;
     d = new Date();
     window.lastClick = d.getTime();
-    if (id === "menu-icon" || id === "font-size-icon") {
-      switch (id) {
-        case "menu-icon":
-          toggle("menu");
-          gotoTop();
-          break;
-        case "font-size-icon":
-          toggle("settings");
-      }
+    if (id === "menu-icon" || id === "font-size-icon" || id === "library-home-icon") {
+        switch (id) {
+            case "menu-icon":
+                toggle("menu");
+                gotoTop();
+                break;
+            case "font-size-icon":
+                toggle("settings");
+                break;
+            case "library-home-icon":
+                document.location.href = "index.html";
+        }
     } else {
       clearMenus();
       switch (id) {

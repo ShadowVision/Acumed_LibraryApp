@@ -275,6 +275,7 @@ button,
 .playing #play-icon,
 #sound-icon,
 #menu-icon,
+#library-home-icon,
 #font-size-icon {
     height: 3rem;
     width: auto;
@@ -298,6 +299,7 @@ button,
 .playing #play-icon,
 #sound-icon,
 #menu-icon,
+#library-home-icon,
 #font-size-icon {
     -webkit-box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
     box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
@@ -325,6 +327,7 @@ button,
 .playing #play-icon,
 #sound-icon,
 #menu-icon,
+#library-home-icon,
 #font-size-icon {
     display: inline-block;
     background-size: contain;
@@ -345,6 +348,7 @@ button,
 .playing #play-icon span,
 #sound-icon span,
 #menu-icon span,
+#library-home-icon,
 #font-size-icon span {
     display: inline;
 }
@@ -396,7 +400,9 @@ button,
 #menu-icon {
     background-image: url(assets/images/menu-icon.svg);
 }
-
+#library-home-icon{
+    background-image: url(assets/images/home.svg)
+}
 #font-size-icon {
     background-image: url(assets/images/fontsize-icon.svg);
 }
