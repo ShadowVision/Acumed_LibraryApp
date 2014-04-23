@@ -10,51 +10,51 @@
     }, {
         id: "polarus-plates-1",
         name: "1. Preoperative planning",
-        media: "SLIC_TargetGuide-ST_Step1.mp3"
+        media: "plateStep1.wav"
     }, {
         id: "polarus-plates-2",
         name: "2. Patient Positioning",
-        media: "SLIC_TargetGuide-ST_Step2.mp3"
+        media: "plateStep2.wav"
     }, {
         id: "polarus-plates-3",
         name: "3. Approach and Incision",
-        media: ""
+        media: "plateStep3.wav"
     }, {
         id: "polarus-plates-4",
         name: "4. Bone Reduction",
-        media: ""
+        media: "plateStep4.wav"
     }, {
         id: "polarus-plates-5",
         name: "5. Plate Selection",
-        media: ""
+        media: "plateStep5.wav"
     }, {
         id: "polarus-plates-6",
         name: "6. Plate Placement and Reduction",
-        media: ""
+        media: "plateStep6.wav"
     }, {
         id: "polarus-plates-7",
         name: "7. Screw Insertion-Shaft",
-        media:""
+        media:"plateStep7.wav"
     }, {
           id: "polarus-plates-8",
           name: "8. Screw Insertion-Shaft",
-          media:""
+          media:"plateStep8.wav"
     }, {
           id: "polarus-plates-9",
           name: "9. Additional Shaft Screw Insertion",
-          media:""
+          media:"plateStep9.wav"
     }, {
           id: "polarus-plates-10",
           name: "10. Sutures",
-          media:""
+          media:"plateStep10.wav"
     }, {
           id: "polarus-plates-11",
           name: "11. Soft-Tissue Closure",
-          media:""
+          media:"plateStep11.wav"
     }, {
           id: "polarus-plates-12",
           name: "12. Post-Op Protocol",
-          media:""
+          media:"plateStep12.wav"
     }, {
           id: "proximalNails-1",
           name: "1. Preoperative Planning",
