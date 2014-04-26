@@ -151,7 +151,12 @@
           id: "distalNails-11",
           name: "11. Post-Op Protocol",
           media:""
-    }
+    },
+      {
+          id: "ordering",
+          name: "Ordering Information",
+          media:""
+      }
  ];
 
   this.list = {};
