@@ -2890,7 +2890,7 @@ nav .inner div {
         <a href="#distalNails-11">11. Postoperative Protocol</a>
         <a href="#ordering">Ordering Information</a>
     </div>
-</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="title">POLARUS 3 Solution</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/exit-icon.svg" onclick="unzoomImage()"></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content-->
+</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="title">POLARUS &#174; 3 Solution</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/exit-icon.svg" onclick="unzoomImage()"></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content-->
 <div id="title" data-role="page">
     <section>
         <figure>
@@ -7088,7 +7088,8 @@ visit acumed.net.
           window.media.release();
         }
       }
-      window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
+//      window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
+        window.media = new Media("/android_asset/" + src, window.audioEnded, log, window.audioStatus);
       window.media.play();
       lastSource = src;
       add("playing");
