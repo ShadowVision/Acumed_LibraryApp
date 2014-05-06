@@ -82,18 +82,18 @@
             index = href.indexOf("index.html");
             path = href.substr(0, index);
             src = "/android_asset/www/assets/media/" + currentPage.media;
-            log("opening: " + path + src);
+            log("opening: " + src);
             if (window.media != null) {
                 if (lastSource !== src) {
                     window.media.stop();
                     window.media.release();
                 }
             }
-            window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
+            window.media = new Media(src, window.audioEnded, log, window.audioStatus);
             window.media.play();
             lastSource = src;
             add("playing");
-            log("playing: " + path + src);
+            log("playing: " + src);
         } else {
             if (audio.getAttribute("src") !== src) {
                 audio.setAttribute("src", src);

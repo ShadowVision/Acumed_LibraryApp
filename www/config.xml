@@ -3,6 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
         id        = "com.acumed.library"
         version   = "1.0.0">
 
@@ -24,6 +25,15 @@
     -->
 
     <!-- Customize your app and platform with the preference element. -->
+    <gap:config-file platform="android" parent="/manifest">
+        <permission android:name="android.permission.INTERNET" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </gap:config-file>
     <preference name="phonegap-version"           value="3.2.0" />
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
