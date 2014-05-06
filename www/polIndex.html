@@ -7081,15 +7081,10 @@ visit acumed.net.
       href = self.location.href;
       index = href.indexOf("index.html");
       path = href.substr(0, index);
-      var myMedia = new Media(src);
-      myMedia.play();
       log("opening: " + path + src);
-      if (window.media != null) {
-        if (lastSource != src) {
-          window.media.stop();
-          window.media.release();
-        }
-      }
+
+      var myMedia = new Media(path+src);
+      myMedia.play();
       window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
       window.media.play();
       lastSource = src;
