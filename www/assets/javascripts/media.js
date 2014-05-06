@@ -72,33 +72,36 @@
     }
   };
 
-  this.playCurrent = function() {
-    var href, index, lastSource, path, src;
-    log("playCurrent");
-    add("playing");
-    src = "assets/media/" + currentPage.media;
-    if ((typeof device !== "undefined" && device !== null) && device.platform === "Android") {
-      href = self.location.href;
-      index = href.indexOf("index.html");
-      src = '/android_asset/www/' + src;
-      log("opening: " + path + src);
-
-      var myMedia = new Media(path+src);
-      myMedia.play();
-      window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
-      window.media.play();
-      lastSource = src;
-      add("playing");
-      log("playing: " + path + src);
-    } else {
-      if (audio.getAttribute("src") !== src) {
-        audio.setAttribute("src", src);
-        audio.load();
-      }
-      audio.play();
-    }
-    return true;
-  };
+    this.playCurrent = function() {
+        var href, index, lastSource, path, src;
+        log("playCurrent");
+        add("playing");
+        src = "assets/media/" + currentPage.media;
+        if ((typeof device !== "undefined" && device !== null) && device.platform === "Android") {
+            href = self.location.href;
+            index = href.indexOf("index.html");
+            path = href.substr(0, index);
+            log("opening: " + path + src);
+            if (window.media != null) {
+                if (lastSource !== src) {
+                    window.media.stop();
+                    window.media.release();
+                }
+            }
+            window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
+            window.media.play();
+            lastSource = src;
+            add("playing");
+            log("playing: " + path + src);
+        } else {
+            if (audio.getAttribute("src") !== src) {
+                audio.setAttribute("src", src);
+                audio.load();
+            }
+            audio.play();
+        }
+        return true;
+    };
 
   this.stopCurrent = function() {
     log("@stopCurrent");
