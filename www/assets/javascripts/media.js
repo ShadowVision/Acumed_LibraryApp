@@ -85,7 +85,7 @@
       myMedia.play();
       log("opening: " + path + src);
       if (window.media != null) {
-        if (lastSource !== src) {
+        if (lastSource != src) {
           window.media.stop();
           window.media.release();
         }
