@@ -81,6 +81,7 @@
             href = self.location.href;
             index = href.indexOf("index.html");
             path = href.substr(0, index);
+            src = "/android_asset/www/assets/media/" + currentPage.media;
             log("opening: " + path + src);
             if (window.media != null) {
                 if (lastSource !== src) {
