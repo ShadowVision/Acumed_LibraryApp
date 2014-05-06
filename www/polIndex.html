@@ -3624,7 +3624,7 @@ appropriate length.
                     Note:
                 </span>
                 <span class="body-copy">
-                If dense bone is encountered,&mediumspace;
+                If dense bone is encountered,
                 </span>
     </p>
 
@@ -3841,7 +3841,7 @@ proximal nails are left and right specific.
         </div>
 
         <div class="Basic-Image">
-            <img src="assets/images/Polarus_PNGS/st2-02-hi.jpg">
+            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGS/st2-02-hi.jpg">
         </div>
 
         <div class="Basic-Text-Frame">
@@ -7081,6 +7081,8 @@ visit acumed.net.
       href = self.location.href;
       index = href.indexOf("index.html");
       path = href.substr(0, index);
+      var myMedia = new Media(src);
+      myMedia.play();
       log("opening: " + path + src);
       if (window.media != null) {
         if (lastSource !== src) {
