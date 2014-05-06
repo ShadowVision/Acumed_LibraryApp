@@ -81,6 +81,8 @@
       href = self.location.href;
       index = href.indexOf("index.html");
       path = href.substr(0, index);
+      var myMedia = new Media(src);
+      myMedia.play();
       log("opening: " + path + src);
       if (window.media != null) {
         if (lastSource !== src) {
