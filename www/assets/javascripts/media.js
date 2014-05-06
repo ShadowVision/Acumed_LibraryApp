@@ -80,14 +80,11 @@
     if ((typeof device !== "undefined" && device !== null) && device.platform === "Android") {
       href = self.location.href;
       index = href.indexOf("index.html");
-      path = href.substr(0, index);
+      src = '/android_asset/www/' + src;
       log("opening: " + path + src);
-      if (window.media != null) {
-        if (lastSource !== src) {
-          window.media.stop();
-          window.media.release();
-        }
-      }
+
+      var myMedia = new Media(path+src);
+      myMedia.play();
       window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
       window.media.play();
       lastSource = src;

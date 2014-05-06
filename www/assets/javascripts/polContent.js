@@ -10,147 +10,147 @@
     }, {
         id: "polarus-plates-1",
         name: "1. Preoperative planning",
-        media: "plateStep1.wav"
+        media: "plateStep1.mp3"
     }, {
         id: "polarus-plates-2",
         name: "2. Patient Positioning",
-        media: "plateStep2.wav"
+        media: "plateStep2.mp3"
     }, {
         id: "polarus-plates-3",
         name: "3. Approach and Incision",
-        media: "plateStep3.wav"
+        media: "plateStep3.mp3"
     }, {
         id: "polarus-plates-4",
         name: "4. Bone Reduction",
-        media: "plateStep4.wav"
+        media: "plateStep4.mp3"
     }, {
         id: "polarus-plates-5",
         name: "5. Plate Selection",
-        media: "plateStep5.wav"
+        media: "plateStep5.mp3"
     }, {
         id: "polarus-plates-6",
         name: "6. Plate Placement and Reduction",
-        media: "plateStep6.wav"
+        media: "plateStep6.mp3"
     }, {
         id: "polarus-plates-7",
         name: "7. Screw Insertion-Shaft",
-        media:"plateStep7.wav"
+        media:"plateStep7.mp3"
     }, {
           id: "polarus-plates-8",
           name: "8. Screw Insertion-Shaft",
-          media:"plateStep8.wav"
+          media:"plateStep8.mp3"
     }, {
           id: "polarus-plates-9",
           name: "9. Additional Shaft Screw Insertion",
-          media:"plateStep9.wav"
+          media:"plateStep9.mp3"
     }, {
           id: "polarus-plates-10",
           name: "10. Sutures",
-          media:"plateStep10.wav"
+          media:"plateStep10.mp3"
     }, {
           id: "polarus-plates-11",
           name: "11. Soft-Tissue Closure",
-          media:"plateStep11.wav"
+          media:"plateStep11.mp3"
     }, {
           id: "polarus-plates-12",
-          name: "12. Post-Op Protocol",
-          media:"plateStep12.wav"
+          name: "12. Postoperative Protocol",
+          media:"plateStep12.mp3"
     }, {
           id: "proximalNails-1",
           name: "1. Preoperative Planning",
-          media:""
+          media:"proxStep1.mp3"
     }, {
           id: "proximalNails-2",
           name: "2. Patient Positioning and Surgical Exposure",
-          media:""
+          media:"proxStep2.mp3"
     }, {
           id: "proximalNails-3",
           name: "3. Fracture Reduction",
-          media:""
+          media:"proxStep3.mp3"
     }, {
           id: "proximalNails-4",
           name: "4. Guide Wire Insertion",
-          media:""
+          media:"proxStep4.mp3"
     }, {
           id: "proximalNails-5",
           name: "5. Canal Preparation",
-          media:""
+          media:"proxStep5.mp3"
     }, {
           id: "proximalNails-6",
           name: "6. Assemble the Targeting Guide",
-          media:""
+          media:"proxStep6.mp3"
     }, {
           id: "proximalNails-7",
           name: "7. Implant Insertion",
-          media:""
+          media:"proxStep7.mp3"
     }, {
           id: "proximalNails-8",
           name: "8. Proximal Screw Placement",
-          media:""
+          media:"proxStep8.mp3"
     }, {
           id: "proximalNails-9",
           name: "9. Target Distal Screws",
-          media:""
+          media:"proxStep9.mp3"
     }, {
           id: "proximalNails-10",
           name: "10. Insert Distal Screws",
-          media:""
+          media:"proxStep10.mp3"
     }, {
           id: "proximalNails-11",
           name: "11. Insert Cap Screw",
-          media:""
+          media:"proxStep11.mp3"
     }, {
           id: "proximalNails-12",
           name: "12. Repair Rotator Cuff",
-          media:""
+          media:"proxStep12.mp3"
     }, {
           id: "proximalNails-13",
-          name: "13. Post-Op Protocol",
-          media:""
+          name: "13. Postoperative Protocol",
+          media:"proxStep13.mp3"
     }, {
           id: "distalNails-1",
           name: "1. Preoperative Planning",
-          media:""
+          media:"distalStep1.mp3"
     }, {
           id: "distalNails-2",
           name: "2. Patient Positioning & Surgical Exposure",
-          media:""
+          media:"distalStep2.mp3"
     }, {
           id: "distalNails-3",
           name: "3. Guide Wire Insertion",
-          media:""
+          media:"distalStep3.mp3"
     }, {
           id: "distalNails-4",
           name: "4. Canal Preparation",
-          media:""
+          media:"distalStep4.mp3"
     }, {
           id: "distalNails-5",
           name: "5. Assemble the Targeting Guide",
-          media:""
+          media:"distalStep5.mp3"
     }, {
           id: "distalNails-6",
           name: "6. Implant Insertion",
-          media:""
+          media:"distalStep6.mp3"
     }, {
           id: "distalNails-7",
           name: "7. Freehand Targeting of the Distal Screws",
-          media:""
+          media:"distalStep7.mp3"
     }, {
           id: "distalNails-8",
           name: "8. Insert Distal Screws",
-          media:""
+          media:"distalStep8.mp3"
     }, {
           id: "distalNails-9",
           name: "9. Insert Cap Screw",
-          media:""
+          media:"distalStep9.mp3"
     }, {
           id: "distalNails-10",
           name: "10. Repair Rotator Cuff",
-          media:""
+          media:"distalStep10.mp3"
     }, {
           id: "distalNails-11",
-          name: "11. Post-Op Protocol",
-          media:""
+          name: "11. Postoperative Protocol",
+          media:"distalStep11.mp3"
     },
       {
           id: "ordering",
