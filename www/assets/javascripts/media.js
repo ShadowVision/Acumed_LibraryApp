@@ -77,7 +77,7 @@
         log("playCurrent");
         add("playing");
         src = "assets/media/" + currentPage.media;
-        /*if ((typeof device !== "undefined" && device !== null) && device.platform === "Android") {
+        if (device.platform === "Android") {
             href = self.location.href;
             index = href.indexOf("index.html");
             path = href.substr(0, index);
@@ -89,21 +89,20 @@
                     window.media.release();
                 }
             }
-            window.media = new Media(pth + src, window.audioEnded, log, window.audioStatus);
+            window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
             window.media.play();
             lastSource = src;
             add("playing");
             log("playing: " + src);
-        } else {*/
+        } else {
             if (audio.getAttribute("src") !== src) {
                 audio.setAttribute("src", src);
                 audio.load();
             }
             audio.play();
-            return true;
-        };
-        /*return true;
-    };*/
+        }
+        return true;
+    };
 
   this.stopCurrent = function() {
     log("@stopCurrent");
