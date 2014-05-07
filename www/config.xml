@@ -23,7 +23,7 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-
+    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
     <!-- Customize your app and platform with the preference element. -->
     <gap:config-file platform="android" parent="/manifest">
         <permission android:name="android.permission.INTERNET" />
@@ -33,7 +33,12 @@
         <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </gap:config-file>
+
     <preference name="phonegap-version"           value="3.2.0" />
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
