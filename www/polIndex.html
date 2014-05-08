@@ -7072,7 +7072,7 @@ visit acumed.net.
         add("playing");
         src = "assets/media/" + currentPage.media;
 
-            try{
+            /*try{*/
 
             href = self.location.href;
             index = href.indexOf("index.html");
@@ -7080,13 +7080,13 @@ visit acumed.net.
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
 
-            if (window.media !== null) {
+            if (window.media) {
                 if (lastSource !== src) {
                     log("@playCurrent in if(window.media !== null");
                     window.media.stop();
                     window.media.release();
                 }
-            }
+           /* }*/
             window.media = new Media(path + src, log, log, window.audioStatus);
             log("@playCurrent calling window.media.play()");
             window.media.play();
@@ -7094,9 +7094,9 @@ visit acumed.net.
             lastSource = src;
             add("playing");
             log("playing: " + src);
-            } catch(err) {
+            } /*catch(err) {
                 log("PROBLEM IN TRY BLOCK");
-            }
+            }*/
 
             log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
