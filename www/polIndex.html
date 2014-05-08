@@ -7075,8 +7075,8 @@ visit acumed.net.
             try{
 
             href = self.location.href;
-            polIndex = href.indexOf("polIndex.html");
-            path = href.substr(0, polIndex);
+            index = href.indexOf("index.html");
+            path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
 
@@ -7094,7 +7094,9 @@ visit acumed.net.
             lastSource = src;
             add("playing");
             log("playing: " + src);
-            } catch(err) {}
+            } catch(err) {
+                log("PROBLEM IN TRY BLOCK");
+            }
 
             log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
