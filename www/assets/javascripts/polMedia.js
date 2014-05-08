@@ -84,7 +84,7 @@
         if ((typeof device !== "undefined") && device.platform === "Android") {
             log("@playCurrent detected android");
             href = self.location.href;
-            index = href.indexOf("slicIndex.html");
+            index = href.indexOf("polIndex.html");
             path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
@@ -148,3 +148,6 @@
     };
 
 }).call(this);
+/**
+ * Created by TPoole on 5/8/14.
+ */
