@@ -7071,14 +7071,15 @@ visit acumed.net.
         log("playCurrent");
         add("playing");
         src = "assets/media/" + currentPage.media;
-        try{
-        if (navigator.userAgent.match(/Android/)) {
-            log("@playCurrent detected Android");
+
+            try{
+
             href = self.location.href;
             polIndex = href.indexOf("polIndex.html");
             path = href.substr(0, polIndex);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
+
             if (window.media !== null) {
                 if (lastSource !== src) {
                     log("@playCurrent in if(window.media !== null");
@@ -7089,25 +7090,18 @@ visit acumed.net.
             window.media = new Media(path + src, log, log, window.audioStatus);
             log("@playCurrent calling window.media.play()");
             window.media.play();
+                log("@playCurrent detected Android");
             lastSource = src;
             add("playing");
             log("playing: " + src);
-        } else {
+            } catch(err) {}
+
             log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
                 audio.setAttribute("src", src);
                 audio.load();
             }
             audio.play();
-        }
-        }catch(err){
-            log("@playCurrent did not detect Android");
-            if (audio.getAttribute("src") !== src) {
-                audio.setAttribute("src", src);
-                audio.load();
-            }
-            audio.play();
-            }
         return true;
     };
 
@@ -7115,11 +7109,10 @@ visit acumed.net.
         log("@stopCurrent");
         remove("playing");
         try {
-            if (navigator.userAgent.match(/Android/)) {
+
             if (window.media != null) {
                 window.media.pause();
             }
-        }
         } catch(err)
         {
 
@@ -7143,11 +7136,10 @@ visit acumed.net.
         log("@restartCurrent");
         stopCurrent();
         try{
-            if (navigator.userAgent.match(/Android/)) {
+
             window.media.seekTo(0);
             playCurrent();
             return true;
-        }
         }
         catch(err){}
         audio.load();
