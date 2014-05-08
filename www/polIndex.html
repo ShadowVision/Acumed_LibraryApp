@@ -7069,7 +7069,9 @@ visit acumed.net.
         log("playCurrent");
         add("playing");
         src = "assets/media/" + currentPage.media;
-        if ((typeof device !== "undefined") && device.platform !== "iPhone") {
+        if (typeof device !== "undefined"){
+            log("@playCurrent says device is not undefined");
+            if(device.platform !== "iPhone") {
             log("@playCurrent detected Android");
             href = self.location.href;
             index = href.indexOf("index.html");
@@ -7089,6 +7091,7 @@ visit acumed.net.
             lastSource = src;
             add("playing");
             log("playing: " + src);
+        }
         } else {
             log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
