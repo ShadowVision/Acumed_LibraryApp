@@ -80,8 +80,8 @@
         log("playCurrent");
         add("playing");
         src = "assets/media/" + currentPage.media;
-        if ((typeof device !== "undefined") && device.platform === "Android") {
-            log("@playCurrent detected android");
+        if ((typeof device !== "undefined") && device.platform !== "iPhone") {
+            log("@playCurrent detected Android");
             href = self.location.href;
             index = href.indexOf("index.html");
             path = href.substr(0, index);
@@ -114,7 +114,7 @@
     this.stopCurrent = function() {
         log("@stopCurrent");
         remove("playing");
-        if ((typeof device !== "undefined") && device.platform === "Android") {
+        if ((typeof device !== "undefined") && device.platform !== "iPhone") {
             if (window.media != null) {
                 window.media.pause();
             }
@@ -137,7 +137,7 @@
     this.restartCurrent = function() {
         log("@restartCurrent");
         stopCurrent();
-        if ((typeof device !== "undefined") && device.platform === "Android") {
+        if ((typeof device !== "undefined") && device.platform !== "iPhone") {
             window.media.seekTo(0);
             playCurrent();
             return true;
