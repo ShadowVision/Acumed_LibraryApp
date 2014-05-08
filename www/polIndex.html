@@ -6994,6 +6994,7 @@ visit acumed.net.
         log("@initMedia");
         this.play = get("play-icon");
         this.audio = get("audio");
+        window.media = null;
         return this.audio.addEventListener('ended', window.audioEnded);
     };
 
@@ -7078,7 +7079,7 @@ visit acumed.net.
             path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
-            if (window.media !== null) {
+            if (window.media) {
                 if (lastSource !== src) {
                     log("@playCurrent in if(window.media !== null");
                     window.media.stop();
@@ -7106,7 +7107,7 @@ visit acumed.net.
         log("@stopCurrent");
         remove("playing");
         if ((typeof device !== "undefined") && device.platform === "Android") {
-            if (window.media !== null) {
+            if (window.media) {
                 window.media.pause();
             }
         }
