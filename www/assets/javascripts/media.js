@@ -55,8 +55,10 @@
     this.togglePlaying = function() {
         log("@togglePlaying");
         if (has("playing")) {
+            log("@togglePlaying calling stopCurrent");
             return stopCurrent();
         } else {
+            log("@togglePlaying calling playCurrent");
             return playCurrent();
         }
     };
@@ -64,8 +66,10 @@
     this.toggleAutoPlay = function() {
         if (has("autoplay")) {
             remove("autoplay");
+            log("@toggleAutoPlay calling stopCurrent");
             return stopCurrent();
         } else {
+            log("@toggleAutoPlay calling playCurrent");
             add("autoplay");
             return playCurrent();
         }
@@ -77,23 +81,27 @@
         add("playing");
         src = "assets/media/" + currentPage.media;
         if ((typeof device !== "undefined") && device.platform === "Android") {
+            log("@playCurrent detected android");
             href = self.location.href;
             index = href.indexOf("index.html");
             path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
-            if (window.media != null) {
+            if (window.media !== null) {
                 if (lastSource !== src) {
+                    log("@playCurrent in if(window.media !== null");
                     window.media.stop();
                     window.media.release();
                 }
             }
             window.media = new Media(path + src, log, log, window.audioStatus);
+            log("@playCurrent calling window.media.play()");
             window.media.play();
             lastSource = src;
             add("playing");
             log("playing: " + src);
         } else {
+            log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
                 audio.setAttribute("src", src);
                 audio.load();
@@ -106,7 +114,7 @@
     this.stopCurrent = function() {
         log("@stopCurrent");
         remove("playing");
-        if ((typeof device !== "undefined" && device !== null) && device.platform === "Android") {
+        if ((typeof device !== "undefined") && device.platform === "Android") {
             if (window.media != null) {
                 window.media.pause();
             }
