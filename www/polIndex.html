@@ -7078,7 +7078,7 @@ visit acumed.net.
             index = href.indexOf("index.html");
             path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
-            log("opening: " + src);
+            log("opening: " + path + src);
 
             if (window.media) {
                 if (lastSource !== src) {
@@ -7086,6 +7086,7 @@ visit acumed.net.
                     window.media.stop();
                     window.media.release();
                 }
+            }
            /* }*/
             window.media = new Media(path + src, log, log, window.audioStatus);
             log("@playCurrent calling window.media.play()");
@@ -7094,7 +7095,7 @@ visit acumed.net.
             lastSource = src;
             add("playing");
             log("playing: " + src);
-            } /*catch(err) {
+    /*} catch(err) {
                 log("PROBLEM IN TRY BLOCK");
             }*/
 
