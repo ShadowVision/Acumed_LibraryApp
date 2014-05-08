@@ -3,6 +3,7 @@
         log("@initMedia");
         this.play = get("play-icon");
         this.audio = get("audio");
+        window.media = null;
         return this.audio.addEventListener('ended', window.audioEnded);
     };
 
@@ -36,7 +37,7 @@
         }
         window.ending = true;
         if (has('autoplay')) {
-            if (window.media != null) {
+            if (window.media) {
                 log("checking position");
                 window.media.getCurrentPosition(window.audioPosition);
             } else {
@@ -78,17 +79,12 @@
     this.playCurrent = function() {
         var href, index, lastSource, path, src;
         log("playCurrent");
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/))
-        {
-            log(device.platform);
-        }
         add("playing");
         src = "assets/media/" + currentPage.media;
-        try{
-        if (device.platform === "Android") {
-            log("@playCurrent detected Android");
+        if ((typeof device !== "undefined") && device.platform === "Android") {
+            log("@playCurrent detected android");
             href = self.location.href;
-            index = href.indexOf("index.html");
+            index = href.indexOf("polIndex.html");
             path = href.substr(0, index);
             src = "assets/media/" + currentPage.media;
             log("opening: " + src);
@@ -99,12 +95,12 @@
                     window.media.release();
                 }
             }
-            window.media = new Media(path + src, log, log, window.audioStatus);
+            window.media = new Media(path + src, window.audioEnded, log, window.audioStatus);
             log("@playCurrent calling window.media.play()");
             window.media.play();
             lastSource = src;
             add("playing");
-            log("playing: " + src);
+            log("playing: " + path + src);
         } else {
             log("@playCurrent did not detect Android");
             if (audio.getAttribute("src") !== src) {
@@ -113,29 +109,16 @@
             }
             audio.play();
         }
-        }catch(err){
-            log("@playCurrent did not detect Android");
-            if (audio.getAttribute("src") !== src) {
-                audio.setAttribute("src", src);
-                audio.load();
-            }
-            audio.play();
-            }
         return true;
     };
 
     this.stopCurrent = function() {
         log("@stopCurrent");
         remove("playing");
-        try {
-        if (device.platform === "Android") {
-            if (window.media != null) {
+        if ((typeof device !== "undefined") && device.platform === "Android") {
+            if (window.media !== null) {
                 window.media.pause();
             }
-        }
-        } catch(err)
-        {
-
         }
         if (typeof audio !== "undefined" && audio !== null) {
             audio.pause();
@@ -155,14 +138,11 @@
     this.restartCurrent = function() {
         log("@restartCurrent");
         stopCurrent();
-        try{
-        if (device.platform === "Android") {
+        if ((typeof device !== "undefined") && device.platform === "Android") {
             window.media.seekTo(0);
             playCurrent();
             return true;
         }
-        }
-        catch(err){}
         audio.load();
         return playCurrent();
     };
