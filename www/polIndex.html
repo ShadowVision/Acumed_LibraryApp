@@ -7067,10 +7067,11 @@ visit acumed.net.
     this.playCurrent = function() {
         var href, index, lastSource, path, src;
         log("playCurrent");
+        log(device.platform);
         add("playing");
         src = "assets/media/" + currentPage.media;
         try{
-        if (device.platform === "Android") {
+        if (device.platform !== "iPhone") {
             log("@playCurrent detected Android");
             href = self.location.href;
             index = href.indexOf("index.html");
@@ -7113,7 +7114,7 @@ visit acumed.net.
         log("@stopCurrent");
         remove("playing");
         try {
-        if (device.platform === "Android") {
+        if (device.platform !== "iPhone") {
             if (window.media != null) {
                 window.media.pause();
             }
@@ -7141,7 +7142,7 @@ visit acumed.net.
         log("@restartCurrent");
         stopCurrent();
         try{
-        if (device.platform === "Android") {
+        if (device.platform !== "iPhone") {
             window.media.seekTo(0);
             playCurrent();
             return true;
