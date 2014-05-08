@@ -36,6 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
         docInfo();
         appInfo();
+        log("Testing index.js");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

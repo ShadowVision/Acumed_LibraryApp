@@ -78,6 +78,10 @@
     this.playCurrent = function() {
         var href, index, lastSource, path, src;
         log("playCurrent");
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/))
+        {
+            log(device.platform);
+        }
         add("playing");
         src = "assets/media/" + currentPage.media;
         try{
