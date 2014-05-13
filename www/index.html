@@ -4,36 +4,43 @@
     <title>Acumed Library</title>
     <style type='text/css'>
         html{
-            background:url('assets/LibraryGraphics/libraryBg.png')	no-repeat center center fixed;
+            background:url('assets/LibraryGraphics/libraryBg.png')  no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            height: 100%;
         }
         body{
             margin:0;
             padding:0;
+            height: 100%;
         }
         #library{
             margin:0;
             padding:0;
+            height: 100%;
         }
         .libraryHeader{
-            background:url('assets/LibraryGraphics/libraryHeader.png') repeat-x;
-            height:60px;
-            width:100%;
-            background-size:1px 100%;
+            background:url('assets/LibraryGraphics/libraryHeader.png') repeat-x  ;
+            background-size: contain;
             padding-top:30px;
+            min-height: 30px;
+            max-height: 60px;
+            width:100%;
+            height:60px;
             margin:0;
         }
+        #libraryHeaderBg{
+        }
         #libraryTitle{
-            background:url('assets/LibraryGraphics/libraryTitle.png') no-repeat;
+            background:url('assets/LibraryGraphics/libraryTitle.png') no-repeat left center;
             background-size:contain;
             float:left;
             width:70%;
-			min-width:100px;
-			max-width:640px;
-            height:80px;
+            min-width:100px;
+            max-width:640px;
+            height:40px;
             margin:10px 0 0 20px;
         }
         #librarySettingsBtn{
@@ -43,28 +50,30 @@
             width:30px;
             height:30px;
             margin:15px 40px 25px 0px;
-			display:none;
+            display:none;
         }
         .libraryFooter{
             background:url('assets/LibraryGraphics/libraryFooter.png') repeat-x;
             position:fixed;
             bottom:0px;
-            height:30px;
+            max-height: 30px;
+            min-height: 1px;
+            height:5%;
             width:100%;
             background-size:1px 100%;
-            padding-top:30px;
         }
         #apps{
             clear: both;
-            padding: 0 0 0 30px;
+            padding: 12px 0 0 12px;
             height:100%;
+            margin: 0 0 30px 0;
         }
         #apps img{
             float:left;
             height:50%;
-			min-height:60px;
-			max-height:300px;
-            margin:0;
+            min-height:60px;
+            max-height:300px;
+            margin:0 0 0 30px;
             padding:0;
         }
     </style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="utf-8"><script src="phonegap.js"></script><script src="js/index.js"></script>
