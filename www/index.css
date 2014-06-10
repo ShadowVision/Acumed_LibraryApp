@@ -7,7 +7,9 @@
 a {
     color: #00a7e1;
 }
-h1,
+h1 {
+   color: black;
+}
 h2,
 h3,
 h4 {
@@ -38,7 +40,7 @@ h2 {
     position: fixed;
     width: 100%;
     height: 3rem;
-    background: #000;
+    background: #00a7e1;
     color: #fff;
 }
 #header > * {
@@ -180,7 +182,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
-    height: calc(100% - 6rem);
+    height: calc(100% - 7.063rem);
 }
 #inner {
     height: calc(100%);
@@ -308,7 +310,7 @@ body div {
 #footer h4 {
     position: relative;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.225em;
 }
 @media screen and (min-width: 600px) {
     #header h1,
@@ -326,7 +328,6 @@ body div {
 #footer a {
     width: 3rem;
     height: 3rem;
-    background-color: #00a7e1;
     color: #fff;
 }
 #footer {
@@ -335,10 +336,9 @@ body div {
     left: 0;
     right: 0;
     width: 100%;
-    height: 3rem;
+    height: 4.063rem;
     color: #fff;
-    background-color: #00a7e1;
-    border-bottom: 5px solid #f9c72f;
+    background-color: #303030;
 }
 @media screen and (orientation: portrait) {
     section {
@@ -361,8 +361,11 @@ body div {
         display: block;
         float: none;
     }
-    section article h1,
     section article p {
+        padding: 0.5rem 0.5rem 0;
+    }
+    section article h1 {
+        color: black;
         padding: 0.5rem 0.5rem 0;
     }
     @media screen and (min-width: 600px) {
@@ -404,6 +407,14 @@ body div {
         }
     }
 }
+.asideBottom {
+    float: left;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 aside {
     background-color: #000;
     width: 40%;
@@ -411,7 +422,6 @@ aside {
     position: absolute;
     right: 0;
     top: 0;
-    padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px)
 {
@@ -456,20 +466,22 @@ aside img {
 aside ul {
     font-size: 1em;
     padding: 0.5rem;
-    margin-bottom: 0.5em;
+    height: 100%;
     background-color: #bebcb5;
 }
 @media screen and (min-width: 600px) {
     aside ul {
-        font-size: 1.1em;
+        border-bottom: 4px solid #F5E536;
+        font-size: 1.075em;
+        height: calc(100% - 23.8em);
         padding: 2rem;
-        margin-bottom: 4em;
     }
 }
 aside ul h1 {
     color: #000;
 }
 aside .nav {
+    background-color: #F5E536;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -484,7 +496,7 @@ aside .nav {
     transform: translate(-50%);
     text-align: center;
     margin: 0 auto;
-    background-color: #00a7e1;
+    background-color: #303030;
     z-index: 100;
 }
 .Blank-Image {

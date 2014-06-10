@@ -161,20 +161,25 @@ aside img {
 aside ul {
     font-size: 1em;
     padding: 0.5rem;
-    margin-bottom: 0.5em;
-    background-color: #bebcb5;
+    background-color: #f3f2f0;
 }
 
 @media screen and (min-width: 600px) {
     aside ul {
-        font-size: 1.1em;
+        border-bottom: 4px solid #F5E536;
+        font-size: 1.075em;
+        height: calc(100% - 23.8em);
         padding: 2rem;
-        margin-bottom: 4em;
     }
 }
 
 aside ul h1 {
     color: #000;
+    font-size: 1.075em;
+}
+
+aside ul h2 {
+    font-size: 1.075em;
 }
 
 aside nav {
@@ -193,7 +198,7 @@ aside nav {
     -transform: translate(-50%);
     text-align: center;
     margin: 0 auto;
-    background-color: #00a7e1;
+    background-color: #303030;
     z-index: 100;
 }
 
@@ -231,7 +236,14 @@ a {
     color: #00a7e1;
 }
 
-h1,
+h1 {
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.225em;
+}
 h2,
 h3,
 h4 {
@@ -407,7 +419,6 @@ button,
     overflow-x: hidden;
     overflow-y: hidden;
     width: 99.9%;
-    height: calc(full -bar-height -bar-height);
     position: absolute;
     left: 0;
 }
