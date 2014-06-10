@@ -166,9 +166,8 @@ aside ul {
 
 @media screen and (min-width: 600px) {
     aside ul {
-        border-bottom: 4px solid #F5E536;
         font-size: 1.075em;
-        height: calc(100% - 23.8em);
+        height: calc(100%);
         padding: 2rem;
     }
 }
