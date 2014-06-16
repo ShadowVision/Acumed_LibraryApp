@@ -4,7 +4,7 @@
   var arrImages = document.getElementsByTagName("img");
   var currentImage;
   var src;
-  var magnifyingGlass = "assets/images/magnifyingGlass.gif";
+  var magnifyingGlass = "assets/images/magnifyingGlass.png";
 
   for(var i = 0; i<arrImages.length; i++)
   {
@@ -13,7 +13,7 @@
       if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1)
       {
       currentImage.setAttribute('src', magnifyingGlass);
-      currentImage.setAttribute('style', 'background:url(' + src + '); background-size: cover;');
+      currentImage.setAttribute('style', 'background:url(' + src + '); background-size: contain; background-repeat: no-repeat;');
       }
   }
 
@@ -25,9 +25,9 @@
       if (this.zoomEnabled) {
           image = all("#image")[0];
           path = target.style.background;
-          url = path;
+          url = path.substring(0, path.indexOf(')') + 1);
           image.style.backgroundImage = url;
-          image.src = "";
+          log(url);
           return add("image-zoom");
       }
   };
