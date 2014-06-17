@@ -314,14 +314,10 @@ button,
 #sound-icon,
 #menu-icon,
 #font-size-icon {
-    -webkit-box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
-    box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
 }
 
 .active,
 .sound.autoplay #autoplay-icon {
-    -webkit-box-shadow: inset 0 0 0.75rem rgba(0, 0, 0, 0.35);
-    box-shadow: inset 0 0 0.75rem rgba(0, 0, 0, 0.35);
     background-image: url(assets/images/navClickAuto.png)
 }
 
@@ -404,7 +400,7 @@ button,
 }
 
 .playing #play-icon {
-    background-image: url(assets/images/pause-icon.svg);
+    background-image: url(assets/images/navPause.png);
 }
 
 #sound-icon {
