@@ -559,14 +559,12 @@ aside .nav {
     position: absolute;
     bottom: 0;
     text-align: center;
-    height:90%
 }
 @media screen and (max-width: 450px)
 {
     .left-content,
     .right-content {
     width:auto;
-    height:auto;
     }
 }
 /*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
@@ -730,15 +728,19 @@ span.drop-cap2 {
     border: none;
     text-align: center;
     position: relative;
+    height:48px;
+    z-index:10000000;
     background-position-x: 50%;
 }
 #footer #next-icon {
     background-image: url("assets/images/next-icon.svg");
     background-color: transparent;
+    background-size: contain;
 }
 #footer #prev-icon {
     background-image: url("assets/images/prev-icon.svg");
     background-color: transparent;
+    background-size: contain;
 }
 .first #prev-icon {
     visibility: hidden;
