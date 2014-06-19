@@ -566,6 +566,7 @@ aside .nav {
     .left-content,
     .right-content {
     width:auto;
+    height:auto;
     }
 }
 /*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
