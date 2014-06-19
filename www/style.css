@@ -134,7 +134,7 @@ aside blockquote {
 }
 
 aside img {
-    margin: 0 0 -3px 0;
+    margin: 0 0 -2px 0;
     max-width: 55%
 
 }
@@ -142,12 +142,12 @@ aside img {
 @media screen {
     @media (orientation: portrait) {
         aside img {
-            max-width: 55%;
+            max-width: 100%;
         }
     }
     @media (orientation: landscape) {
         aside img {
-            max-width: 55%;
+            max-width: 75%;
         }
     }
 }

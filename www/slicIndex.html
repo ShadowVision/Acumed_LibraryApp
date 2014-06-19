@@ -501,7 +501,7 @@ aside {
 {
     aside
     {
-    height: auto;
+    height: 100%;
     }
 }
 aside blockquote {
@@ -636,9 +636,17 @@ aside .nav {
 .left-content,
 .right-content {
     width: 28%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     text-align: center;
+    height:90%
+}
+@media screen and (max-width: 450px)
+{
+    .left-content,
+    .right-content {
+    width:auto;
+    }
 }
 /*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
 .left-content {
@@ -2454,7 +2462,7 @@ aside blockquote {
 }
 
 aside img {
-    margin: 0 0 -3px 0;
+    margin: 0 0 -2px 0;
     max-width: 55%
 
 }
@@ -2462,12 +2470,12 @@ aside img {
 @media screen {
     @media (orientation: portrait) {
         aside img {
-            max-width: 55%;
+            max-width: 100%;
         }
     }
     @media (orientation: landscape) {
         aside img {
-            max-width: 55%;
+            max-width: 75%;
         }
     }
 }
