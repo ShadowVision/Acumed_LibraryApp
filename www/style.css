@@ -193,13 +193,11 @@ aside nav {
     left: 50%;
     height: 100%;
     width: 60%;
-    min-width: 12.189em;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
     -transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
     background-color: #303030;
     z-index: 100;
 }

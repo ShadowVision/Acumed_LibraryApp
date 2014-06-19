@@ -489,7 +489,6 @@ aside .nav {
     -ms-transform: translate(-50%);
     transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
     background-color: #303030;
     z-index: 100;
 }

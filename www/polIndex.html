@@ -569,7 +569,6 @@ aside .nav {
     -ms-transform: translate(-50%);
     transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
     background-color: #303030;
     z-index: 100;
 }
@@ -637,7 +636,7 @@ aside .nav {
 .right-content {
     width: 28%;
     min-width:3em;
-    min-height:3em;
+    min-height:4.063rem;
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -802,28 +801,29 @@ span.drop-cap2 {
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-    span
-        display: inline;
 }
 #footer #prev-icon,
 #footer #next-icon {
+    height: 65px;
+    width: 100%;
     border: none;
     text-align: center;
-    position: relative;
-    min-height:3em;
-    min-width:3em;
+    position: absolute;
     z-index:10000000;
-    background-position-x: 50%;
 }
 #footer #next-icon {
     background-image: url("assets/images/next-icon.svg");
+    background-position: center center;
     background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
+    left: 0;
 }
 #footer #prev-icon {
     background-image: url("assets/images/prev-icon.svg");
+    background-position: center center;
     background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
+    left: 0;
 }
 .first #prev-icon {
     visibility: hidden;
@@ -2527,13 +2527,11 @@ aside nav {
     left: 50%;
     height: 100%;
     width: 60%;
-    min-width: 12.189em;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
     -transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
     background-color: #303030;
     z-index: 100;
 }
