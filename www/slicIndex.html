@@ -637,7 +637,7 @@ aside .nav {
 .right-content {
     width: 28%;
     min-width:3em;
-    min-height:3em;
+    min-height:4.063rem;
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -805,22 +805,26 @@ span.drop-cap2 {
 }
 #footer #prev-icon,
 #footer #next-icon {
+    height: 65px;
+    width: 100%;
     border: none;
     text-align: center;
-    position: relative;
-    width:100%;
+    position: absolute;
     z-index:10000000;
-    background-position-x: 50%;
 }
 #footer #next-icon {
     background-image: url("assets/images/next-icon.svg");
+    background-position: center center;
     background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
+    left: 0;
 }
 #footer #prev-icon {
     background-image: url("assets/images/prev-icon.svg");
+    background-position: center center;
     background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
+    left: 0;
 }
 .first #prev-icon {
     visibility: hidden;
