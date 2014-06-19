@@ -800,7 +800,6 @@ span.drop-cap2 {
 #footer #next-icon {
     border: none;
     text-align: center;
-    width: 100%;
     position: relative;
     background-position-x: 50%;
 }
@@ -2513,7 +2512,8 @@ aside nav {
     top: 0;
     left: 50%;
     height: 100%;
-    min-width: 11em;
+    width: 60%;
+    min-width: 12.189em;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
@@ -2694,7 +2694,7 @@ button,
     opacity: 0;
     transition: opacity 0.1s;
     height: 100%;
-    width: 33%;
+    width: 4.083em;
 }
 
 .sound .media-icon,
@@ -2704,7 +2704,7 @@ button,
 .sound #restart-icon {
     opacity: 1;
     height: 100%;
-    width: 33%;
+    width: 4.083em;
 }
 
 #play-icon,
@@ -2786,6 +2786,34 @@ header #title {
 @media screen and (min-width: 600px) {
     header #title {
         left: 13rem;
+    }
+}
+@media screen and (max-width:450px){
+    .media-icon,
+    .sound .media-icon,
+    #play-icon,
+    .sound #play-icon,
+    #autoplay-icon,
+    .sound.autoplay #autoplay-icon,
+    .sound #autoplay-icon,
+    #restart-icon,
+    .sound #restart-icon,
+    .playing #play-icon,
+    #sound-icon {
+        opacity: 0;
+        transition: opacity 0.1s;
+        height: 100%;
+        width: 33%;
+    }
+
+    .sound .media-icon,
+    .sound #play-icon,
+    .sound.autoplay #autoplay-icon,
+    .sound #autoplay-icon,
+    .sound #restart-icon {
+        opacity: 1;
+        height: 100%;
+        width: 33%;
     }
 }
 
