@@ -494,11 +494,11 @@ aside .nav {
 }
 @media screen and (max-width:450px) {
     .center-content {
-        width: 50%;
+        width: 40%;
     }
     .left-content,
     .right-content {
-        width: 25%;
+        width: 30%;
     }
 }
 .Blank-Image {
@@ -569,6 +569,7 @@ aside .nav {
     position: absolute;
     bottom: 0;
     text-align: center;
+    z-index:4
 }
 @media screen and (max-width: 450px)
 {
@@ -733,25 +734,22 @@ span.drop-cap2 {
 }
 #footer #prev-icon,
 #footer #next-icon {
-    height: 65px;
+    height: 100%;
     width: 100%;
     border: none;
     text-align: center;
     position: absolute;
-    z-index:10000000;
 }
 #footer #next-icon {
     background-image: url("assets/images/next-icon.svg");
     background-position: center center;
-    background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
     left: 0;
 }
 #footer #prev-icon {
     background-image: url("assets/images/prev-icon.svg");
     background-position: center center;
-    background-color: transparent;
-    background-size: contain;
+    background-size: 48px 48px;
     left: 0;
 }
 .first #prev-icon {
