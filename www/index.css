@@ -736,6 +736,8 @@ span.drop-cap2 {
 #footer #next-icon {
     height: 100%;
     width: 100%;
+    min-width: 3rem;
+    min-height; 4.063rem;
     border: none;
     text-align: center;
     position: absolute;
