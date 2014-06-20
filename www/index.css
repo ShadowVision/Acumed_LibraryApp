@@ -499,6 +499,8 @@ aside .nav {
     .left-content,
     .right-content {
         width: 25%;
+        background-size:100% 100%;
+        background-position:100% 100%;
     }
 }
 .Blank-Image {
