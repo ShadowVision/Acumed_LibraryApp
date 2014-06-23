@@ -1,5 +1,5 @@
 <!--extends layout--><!--block content-->
-<div id="title" data-role="page">
+<div id="title" data-role="page" onscroll="calcAsideBar()">
     <section>
         <figure>
             <div>
@@ -31,7 +31,7 @@ the recommended procedures for implantation and removal.
                 <a href="http://go.acumed.net/slic-4">www.acumed.net</a>
             </p></article>
     </section>
-    <aside>
+    <aside id="asTitle">
         <blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br/><br/>We are
             dedicated to developing products, service methods, and approaches that improve patient care.
         </blockquote>
@@ -48,5 +48,8 @@ the recommended procedures for implantation and removal.
     </aside>
 
 
-
+    <div id="asideBottom"></div>
+    <script type="text/javascript">
+        asideHeight();
+    </script>
     </div>

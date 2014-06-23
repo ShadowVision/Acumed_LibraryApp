@@ -47,7 +47,7 @@ h2 {
 #header > * {
     top: 0;
 }
-#header #title {
+#header #titleBar {
     position: absolute;
     left: 6rem;
     top: 0;
@@ -58,7 +58,7 @@ h2 {
     vertical-align: middle;
 }
 @media screen and (min-width: 600px) {
-    #header #title {
+    #header #titleBar {
         left: 13rem;
     }
 }
@@ -188,7 +188,8 @@ body {
 #inner {
     height: calc(100%);
     width: 81920px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: translate3d(0, 0, 0);
     /*transition: -webkit-transform 300ms;*/
 }
@@ -401,28 +402,26 @@ body div {
         }
     }
 }
-.asideBottom {
+#asideBottom {
+    background-color: #F5E536;
     float: left;
-    width: 100%;
+    width: 40%;
     height: 4px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
+    z-index: 1;
 }
 aside {
     background-color: #000;
     width: 40%;
-    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
 }
 @media screen and (max-width: 600px)
 {
-    aside
-    {
-    height: 100%;
-    }
+
 }
 aside blockquote {
     padding: 0.5rem;
@@ -465,7 +464,6 @@ aside ul {
 }
 @media screen and (min-width: 600px) {
     aside ul {
-        border-bottom: 4px solid #F5E536;
         font-size: 1.075em;
         height: calc(100% - 23.8em);
         padding: 2rem;
