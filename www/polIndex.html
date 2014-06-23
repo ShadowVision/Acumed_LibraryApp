@@ -641,13 +641,14 @@ aside .nav {
 }
 .left-content,
 .right-content {
-    width: 25%;
+width:25%;
     min-width:3rem;
     min-height:4.063rem;
     position: absolute;
     bottom: 0;
     text-align: center;
-    z-index:4
+    z-index:4;
+	background-color:orange;
 }
 @media screen and (max-width: 450px)
 {
@@ -813,12 +814,12 @@ span.drop-cap2 {
 #footer #prev-icon,
 #footer #next-icon {
     height: 100%;
-    width: 100%;
     min-width: 3rem;
     min-height; 4.063rem;
     border: none;
     text-align: center;
     position: absolute;
+	background-color:red;
 }
 #footer #next-icon {
     background-image: url("assets/images/next-icon.svg");
@@ -833,10 +834,12 @@ span.drop-cap2 {
     left: 0;
 }
 .first #prev-icon {
-    visibility: hidden;
+   /* visibility: hidden;*/
+	background-color:purple;
 }
 .last #next-icon {
-    visibility: hidden;
+   /* visibility: hidden;*/
+	background-color:purple;
 }
 .media-icon,
 .sound .media-icon,
