@@ -23,6 +23,16 @@ img {
     width: 100%;
     border: none;
 }
+span.zoomSpan
+{
+    z-index: 10;
+    background-image:url(assets/images/magnifyingGlass.png);
+    background-repeat:no-repeat;
+    width:50px; height:50px;
+    position:absolute;
+    left:15px;
+    top:15px;
+}
 h1,
 h2 {
     font-size: 1.1em;
@@ -349,7 +359,7 @@ body div {
         width: 90%;
     }
     section > figure img {
-        width: 150%;
+        width: 100%;
     }
     section article {
         width: 100%;
@@ -384,7 +394,7 @@ body div {
         margin: 0 auto;
     }
     section > figure img {
-        width: 150%;
+        width: 100%;
     }
     section article {
         width: 55%;
@@ -403,7 +413,7 @@ body div {
     }
 }
 #asideBottom {
-    background-color: #F5E536;
+    background-color: #EBB012;
     float: left;
     width: 40%;
     height: 4px;
@@ -509,8 +519,27 @@ aside .nav {
 .Basic-Image {
     max-width: 45%;
     margin: 0;
+    position: relative;
     border: none;
     float: left;
+}
+#asideImg
+{
+    max-width:80%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+#polAsideImg
+{
+    max-width:80%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+.zoomHolder
+{
+    position:relative;
 }
 @media screen and (min-width:600px) {
     .Basic-Image {

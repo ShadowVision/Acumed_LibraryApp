@@ -103,6 +103,16 @@ img {
     width: 100%;
     border: none;
 }
+span.zoomSpan
+{
+    z-index: 10;
+    background-image:url(assets/images/magnifyingGlass.png);
+    background-repeat:no-repeat;
+    width:50px; height:50px;
+    position:absolute;
+    left:15px;
+    top:15px;
+}
 h1,
 h2 {
     font-size: 1.1em;
@@ -429,7 +439,7 @@ body div {
         width: 90%;
     }
     section > figure img {
-        width: 150%;
+        width: 100%;
     }
     section article {
         width: 100%;
@@ -464,7 +474,7 @@ body div {
         margin: 0 auto;
     }
     section > figure img {
-        width: 150%;
+        width: 100%;
     }
     section article {
         width: 55%;
@@ -483,7 +493,7 @@ body div {
     }
 }
 #asideBottom {
-    background-color: #F5E536;
+    background-color: #EBB012;
     float: left;
     width: 40%;
     height: 4px;
@@ -589,8 +599,27 @@ aside .nav {
 .Basic-Image {
     max-width: 45%;
     margin: 0;
+    position: relative;
     border: none;
     float: left;
+}
+#asideImg
+{
+    max-width:80%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+#polAsideImg
+{
+    max-width:80%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+.zoomHolder
+{
+    position:relative;
 }
 @media screen and (min-width:600px) {
     .Basic-Image {
@@ -3005,8 +3034,9 @@ the recommended procedures for implantation and removal.
         <blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br/><br/>We are
             dedicated to developing products, service methods, and approaches that improve patient care.
         </blockquote>
-
+        <div id="polAsideImg">
         <img src="assets/images/Polarus_PNGs/title-xray-hi.jpg"/>
+        </div>
 
         <ul>
             <li><h1>Polarus&reg; 3 Solution Design Surgeon</h1><br/>
@@ -3095,7 +3125,9 @@ technique indicate left plates only.
         </div>
         <div class="Basic-Image">
             <img src="assets/images/Polarus_PNGs/st1-02a-hi.jpg">
+            <div class="zoomHolder">
             <img src="assets/images/Polarus_PNGs/st1-02b-hi.jpg">
+                </div>
         </div>
         <div class="Basic-Text-Frame">
 
@@ -3136,8 +3168,8 @@ each approach is offered in the next section.
 
         <div class="Basic-Image">
             <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st1-03a-hi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st1-03b-hi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st1-03c-hi.jpg"/>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st1-03b-hi.jpg"/></div>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st1-03c-hi.jpg"/></div>
         </div>
         <div class="Basic-Text-Frame">
 
@@ -3372,9 +3404,9 @@ need to be requested prior to the surgery
 
     <div class="Basic-Image">
         <img src="assets/images/Polarus_PNGs/st1-06a-hi.jpg"/>
-        <img src="assets/images/Polarus_PNGs/st1-06b-hi.jpg"/>
-        <img src="assets/images/Polarus_PNGs/st1-06c-hi.jpg"/>
-        <img src="assets/images/Polarus_PNGs/st1-06d-hi.jpg"/>
+        <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-06b-hi.jpg"/></div>
+        <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-06c-hi.jpg"/></div>
+        <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-06d-hi.jpg"/></div>
     </div>
 <div class="Basic-Text-Frame">
 
@@ -3447,7 +3479,7 @@ used with care to avoid damaging the suture integrity.
 
     <div class="Basic-Image">
         <img src="assets/images/Polarus_PNGs/st1-07a-hi.jpg"/>
-        <img src="assets/images/Polarus_PNGs/st1-07b-hi.jpg"/>
+        <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-07b-hi.jpg"/></div>
     </div>
 
 
@@ -3527,9 +3559,9 @@ be used to further prepare the bone for screw insertion.
 
         <div class="Basic-Image">
             <img src="assets/images/Polarus_PNGs/st1-08a-hi.jpg"/>
-            <img src="assets/images/Polarus_PNGs/st1-08b-hi.jpg"/>
-            <img src="assets/images/Polarus_PNGs/st1-08c-hi.jpg"/>
-            <img src="assets/images/Polarus_PNGs/st1-08d-hi.jpg"/>
+            <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-08b-hi.jpg"/></div>
+            <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-08c-hi.jpg"/></div>
+            <div class="zoomHolder"><img src="assets/images/Polarus_PNGs/st1-08d-hi.jpg"/></div>
         </div>
 
         <div class="Basic-Text-Frame">
@@ -4023,8 +4055,8 @@ nail fixation.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04b-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04c-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04b-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04c-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4157,7 +4189,7 @@ wire past the fracture site.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-06a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-06b-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-06b-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4243,7 +4275,7 @@ Finger Wrench (MS&dash;0611).
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-07a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-07b-hi.jpg"/>
+    <div class="zoomHolder"> <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-07b-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4311,11 +4343,11 @@ an accurate image of implant depth.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08b-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08c-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08d-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08e-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08f-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08b-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08c-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08d-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08e-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-08f-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4447,7 +4479,7 @@ cannula will not lock like the ratcheting cannula.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-09a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-09b-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-09b-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4643,7 +4675,7 @@ and the skin is closed in standard fashion.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-13a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-13b-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-13b-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -4770,7 +4802,7 @@ right specific.
         </div>
         <div class="Basic-Image">
             <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-02a-hi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-02b-hi.jpg"/>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-02b-hi.jpg"/></div>
         </div>
         <div class="Basic-Text-Frame">
 
@@ -4822,8 +4854,8 @@ available to assist with exposure.
 
         <div class="Basic-Image">
             <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st303ahi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04c-hi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-03b-hi.jpg"/>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st2-04c-hi.jpg"/></div>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-03b-hi.jpg"/></div>
         </div>
 
         <div class="Basic-Text-Frame">
@@ -4966,7 +4998,7 @@ Polarus 3 Nails is 8 mm
 
         <div class="Basic-Image">
             <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-05a-hi.jpg"/>
-            <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-05b-hi.jpg"/>
+            <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-05b-hi.jpg"/></div>
         </div>
 
         <div class="Basic-Text-Frame">
@@ -5040,11 +5072,11 @@ Targeting Connector (80&dash;1629).
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06b-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06c-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06d-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06e-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06f-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06b-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06c-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06d-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06e-hi.jpg"/></div>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-06f-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -5416,7 +5448,7 @@ and the skin is closed in standard fashion.
 
 <div class="Basic-Image">
     <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-11a-hi.jpg"/>
-    <img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-11b-hi.jpg"/>
+    <div class="zoomHolder"><img class="_idGenPageitem-12" src="assets/images/Polarus_PNGs/st3-11b-hi.jpg"/></div>
 </div>
 
 <div class="Basic-Text-Frame">
@@ -7297,40 +7329,43 @@ visit acumed.net.
 // Generated by CoffeeScript 1.6.3
 (function() {
 
-  var arrImages = document.getElementsByTagName("img");
-  var currentImage;
-  var src;
-  var magnifyingGlass = "assets/images/magnifyingGlass.png";
+    var arrImages = document.getElementsByTagName("img");
+    var currentImage;
+    var src;
 
-  for(var i = 0; i<arrImages.length; i++)
-  {
-      currentImage = arrImages[i];
-      src = currentImage.src;
-      if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1)
-      {
-      currentImage.setAttribute('src', magnifyingGlass);
-      currentImage.setAttribute('style', 'background:url(' + src + '); background-size: contain; background-repeat: no-repeat;');
-      }
-  }
+    for(var i = 0; i<arrImages.length; i++)
+    {
+        currentImage = arrImages[i];
+        src = currentImage.src;
 
+        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1 && src.indexOf('magnifyingGlassOut.png') === -1)
+        {
+            {
+                var span = document.createElement("span");
+                span.className = "zoomSpan";
+                var parent = currentImage.parentNode;
+                parent.appendChild(span);
+            }
 
-  this.zoomEnabled = true;
+        }
+    }
 
-  this.zoomImage = function(target) {
-    var image, path, url;
-      if (this.zoomEnabled) {
-          image = all("#image")[0];
-          path = target.style.background;
-          url = path.substring(0, path.indexOf(')') + 1);
-          image.style.backgroundImage = url;
-          log(url);
-          return add("image-zoom");
-      }
-  };
+    this.zoomEnabled = true;
 
-  this.unzoomImage = function() {
-    return remove("image-zoom");
-  };
+    this.zoomImage = function(target) {
+        var image, path, url;
+        if (this.zoomEnabled) {
+            image = all("#image")[0];
+            path = target.getAttribute("src");
+            url = 'url(' + path + ')';
+            image.style.backgroundImage = url;
+            return add("image-zoom");
+        }
+    };
+
+    this.unzoomImage = function() {
+        return remove("image-zoom");
+    };
 
 }).call(this);
 // Generated by CoffeeScript 1.6.3

@@ -32,11 +32,9 @@ function asideHeight () {
     var screenHeight = window.innerHeight;
     var sectionText = document.getElementById("sectionText");
     var sectionImage = document.getElementById("sectionId");
-
-    var polTitleImg = document.getElementById("polTitleImg");
-    if(document.getElementById("polTitleImg"))
+    if(document.getElementById("polAsideImg"))
     {
-        polTitleImg.style.width = "170%";
+        asideEle.style.height = "auto";
     }
     if(screenWidth > screenHeight)
     {
