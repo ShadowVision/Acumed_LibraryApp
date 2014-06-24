@@ -580,10 +580,10 @@ aside .nav {
     }
 }
 .Blank-Image {
-    width: 44%;
+    width: 45%;
     float: left;
     clear: both;
-    margin: 0 0 2em 0;
+    margin: 0 1em 1em 0;
     border: 0px solid #ddd;
 }
 .Basic-Image {
@@ -729,6 +729,7 @@ span.drop-cap2 {
     span.drop-cap2 {
         float: left;
         display: inline;
+        padding-left:1rem;
     }
 }
 #closeImageZoom {
@@ -810,6 +811,10 @@ span.drop-cap2 {
     background-size: contain;
     background-repeat: no-repeat;
 }
+#indications
+{
+    font-weight:bold;
+}
 #footer #prev-icon,
 #footer #next-icon {
     height: 100%;
@@ -821,15 +826,15 @@ span.drop-cap2 {
     position: absolute;
 }
 #footer #next-icon {
-    background-image: url("assets/images/next-icon.png");
+    background-image: url("assets/images/next-icon.svg");
     background-position: center center;
-	background-size:30px;
+    background-size: 48px 48px;
     left: 0;
 }
 #footer #prev-icon {
-    background-image: url("assets/images/prev-icon.png");
+    background-image: url("assets/images/prev-icon.svg");
     background-position: center center;
-	background-size:30px;
+    background-size: 48px 48px;
     left: 0;
 }
 .first #prev-icon {
@@ -2963,15 +2968,15 @@ nav .inner div {
         <a href="#distalNails-11">11. Postoperative Protocol</a>
         <a href="#ordering">Ordering Information</a>
     </div>
-</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="titleBar">POLARUS&reg; 3 Solution</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/exit-icon.svg" onclick="unzoomImage()"></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content-->
+</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="titleBar">POLARUS&reg; 3 Solution</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/magnifyingGlassOut.png" onclick="unzoomImage()"/></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content-->
 <div id="title" data-role="page" onscroll="calcAsideBar()">
     <section>
-        <figure>
+        <figure id="sectionId">
             <div>
-            <img src="assets/images/Polarus_PNGs/title-main-hi.jpg"/>
+            <img id="polTitleImg" src="assets/images/Polarus_PNGs/title-main-hi.jpg"/>
                 </div>
         </figure>
-        <article>
+        <article id="sectionText">
             <h1>Acumed&reg; Polarus&reg; 3 Solution</h1>
             <h1>Plates and Nails</h1>
             <p class="Basic-Paragraph bottom-margin">
@@ -2989,11 +2994,11 @@ the recommended procedures for implantation and removal.
                     </span>
                 </p>
             <p class ="Basic-Paragraph bottom-margin">
-                    <span class="tip">Indications for use</span> The Acumed Polarus 3 Solution includes plates, nails, screws, and accessories designed to address fractures, fusions, and osteotomies of the humerus.
+                    <span id="indications">Indications for use:</span> The Acumed Polarus 3 Solution includes plates, nails, screws, and accessories designed to address fractures, fusions, and osteotomies of the humerus.
             </p>
 
             <p style="font-size: 1.1em; text-align: center; margin: 0 auto;">
-                <a href="http://go.acumed.net/slic-4">www.acumed.net</a>
+                <a href="http://www.acumed.net/products/shoulder/proximal-humerus/polarus-3-solution" target="_blank">www.acumed.net</a>
             </p></article>
     </section>
     <aside id="asTitle">
@@ -3702,14 +3707,14 @@ appropriate length.
 <div role="main" id="main-content" class="content-wrapper" data-role="content">
 
 <div class="Title-Text-Frame">
-    <p class="Basic-Paragraph bottom-margin">
+
                 <span class="drop-cap2">
                 10
                 </span>
                 <span class="page-title">
                 SUTURES
                 </span>
-    </p>
+
 </div>
 
 <div class="Basic-Image">
@@ -3941,7 +3946,7 @@ available to assist with exposure.
 
         <div class="Title-Text-Frame">
             <p class="Basic-Paragraph bottom-margin">
-                <span class="drop-cap2">
+                <span class="drop-cap">
                 3
                 </span>
                 <span class="page-title">

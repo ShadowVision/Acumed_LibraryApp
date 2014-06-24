@@ -500,10 +500,10 @@ aside .nav {
     }
 }
 .Blank-Image {
-    width: 44%;
+    width: 45%;
     float: left;
     clear: both;
-    margin: 0 0 2em 0;
+    margin: 0 1em 1em 0;
     border: 0px solid #ddd;
 }
 .Basic-Image {
@@ -649,6 +649,7 @@ span.drop-cap2 {
     span.drop-cap2 {
         float: left;
         display: inline;
+        padding-left:1rem;
     }
 }
 #closeImageZoom {
@@ -729,6 +730,10 @@ span.drop-cap2 {
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
+}
+#indications
+{
+    font-weight:bold;
 }
 #footer #prev-icon,
 #footer #next-icon {
