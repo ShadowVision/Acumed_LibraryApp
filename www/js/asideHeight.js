@@ -4,24 +4,37 @@ function calcAsideBar() {
 
     var scrollTop = (titleEle.pageYOffset !== undefined) ? titleEle.pageYOffset : (titleEle).scrollTop;
     document.getElementById("asideBottom").style.top = (scrollTop + viewPortHeight - 4) +"px";
+    if(document.getElementById("asTitle").scrollHeight > titleEle.scrollHeight)
+    {
+
+    }
+    else(document.getElementById("asTitle").scrollHeight < titleEle.scrollHeight)
+    {
+
+        var difference = (titleEle.scrollHeight) - (document.getElementById("asTitle").scrollHeight);
+        document.getElementById("asTitle").style.height = (document.getElementById("asTitle").scrollHeight) + difference + "px";
+    }
+
 }
 
 function asideHeight () {
-    var titleScrollHeight;
-    var asHeight;
     var asideEle;
     var positionAsideBottom;
+    var titleEle = document.getElementById("title");
 
     asideEle = document.getElementById("asTitle");
-    titleScrollHeight = document.getElementById("title").clientHeight;
-    asHeight = document.getElementById("asTitle").scrollHeight;
-    if(asHeight <= titleScrollHeight) {
-        asideEle.style.height = "100%";
-    }
-    else {
-        asideEle.style.height = "auto";
-    }
+    asideEle.style.height = "100%";
 
+    if(document.getElementById("asTitle").scrollHeight > titleEle.scrollHeight)
+    {
+
+    }
+    else(document.getElementById("asTitle").scrollHeight < titleEle.scrollHeight)
+    {
+
+        var difference = (titleEle.scrollHeight) - (document.getElementById("asTitle").scrollHeight);
+        document.getElementById("asTitle").style.height = (document.getElementById("asTitle").scrollHeight) + difference + "px";
+    }
 
     positionAsideBottom = document.getElementById("asideBottom");
     positionAsideBottom.style.top = document.getElementById("title").clientHeight - 4 +"px";
@@ -32,10 +45,7 @@ function asideHeight () {
     var screenHeight = window.innerHeight;
     var sectionText = document.getElementById("sectionText");
     var sectionImage = document.getElementById("sectionId");
-    if(document.getElementById("polAsideImg"))
-    {
-        asideEle.style.height = "auto";
-    }
+
     if(screenWidth > screenHeight)
     {
         if(screenWidth >= 1600)
