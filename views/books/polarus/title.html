@@ -1,12 +1,12 @@
 <!--extends layout--><!--block content-->
-<div id="title" data-role="page">
+<div id="title" data-role="page" onresize="asideHeight()">
     <section>
-        <figure>
+        <figure id="sectionId">
             <div>
-            <img src="assets/images/Polarus_PNGs/title-main-hi.jpg"/>
+            <img id="polTitleImg" src="assets/images/Polarus_PNGs/title-main-hi.jpg"/>
                 </div>
         </figure>
-        <article>
+        <article id="sectionText">
             <h1>Acumed&reg; Polarus&reg; 3 Solution</h1>
             <h1>Plates and Nails</h1>
             <p class="Basic-Paragraph bottom-margin">
@@ -24,19 +24,20 @@ the recommended procedures for implantation and removal.
                     </span>
                 </p>
             <p class ="Basic-Paragraph bottom-margin">
-                    <span class="tip">Indications for use</span> The Acumed Polarus 3 Solution includes plates, nails, screws, and accessories designed to address fractures, fusions, and osteotomies of the humerus.
+                    <span id="indications">Indications for use:</span> The Acumed Polarus 3 Solution includes plates, nails, screws, and accessories designed to address fractures, fusions, and osteotomies of the humerus.
             </p>
 
             <p style="font-size: 1.1em; text-align: center; margin: 0 auto;">
-                <a href="http://go.acumed.net/slic-4">www.acumed.net</a>
+                <a href="http://www.acumed.net/products/shoulder/proximal-humerus/polarus-3-solution" target="_blank">www.acumed.net</a>
             </p></article>
     </section>
-    <aside>
+    <aside id="asTitle">
         <blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br/><br/>We are
             dedicated to developing products, service methods, and approaches that improve patient care.
         </blockquote>
-
+        <div id="polAsideImg">
         <img src="assets/images/Polarus_PNGs/title-xray-hi.jpg"/>
+        </div>
 
         <ul>
             <li><h1>Polarus&reg; 3 Solution Design Surgeon</h1><br/>
@@ -44,8 +45,9 @@ the recommended procedures for implantation and removal.
                     <h2>Mr. Christopher Michael Robinson</h2>
                     <h2>BM BS, B Med Sci, FRCS (Edin)</h2></li>
         </ul>
+        <div id="asideBottom"></div>
     </aside>
-
-
-
+    <script type="text/javascript">
+        asideHeight();
+    </script>
     </div>

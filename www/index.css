@@ -7,7 +7,9 @@
 a {
     color: #00a7e1;
 }
-h1,
+h1 {
+   color: black;
+}
 h2,
 h3,
 h4 {
@@ -20,6 +22,16 @@ h4 {
 img {
     width: 100%;
     border: none;
+}
+span.zoomSpan
+{
+    z-index: 10;
+    background-image:url(assets/images/magnifyingGlass.png);
+    background-repeat:no-repeat;
+    width:40px; height:40px;
+    position:absolute;
+    left:15px;
+    top:15px;
 }
 h1,
 h2 {
@@ -36,15 +48,16 @@ h2 {
     left: 0;
     right: 0;
     position: fixed;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
     width: 100%;
     height: 3rem;
-    background: #000;
+    background: #00a7e1;
     color: #fff;
 }
 #header > * {
     top: 0;
 }
-#header #title {
+#header #titleBar {
     position: absolute;
     left: 6rem;
     top: 0;
@@ -55,7 +68,7 @@ h2 {
     vertical-align: middle;
 }
 @media screen and (min-width: 600px) {
-    #header #title {
+    #header #titleBar {
         left: 13rem;
     }
 }
@@ -180,12 +193,13 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
-    height: calc(100% - 6rem);
+    height: calc(100% - 7.063rem);
 }
 #inner {
     height: calc(100%);
     width: 81920px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: translate3d(0, 0, 0);
     /*transition: -webkit-transform 300ms;*/
 }
@@ -240,15 +254,9 @@ button,
 #sound-icon,
 #menu-icon,
 #font-size-icon {
-    -webkit-box-shadow: inset 0 0 0.25rem rgba(255,255,255,0.22);
-    box-shadow: inset 0 0 0.25rem rgba(255,255,255,0.22);
-    border: 1px solid rgba(128,128,128,0.5);
 }
 .active,
 .sound.autoplay #autoplay-icon {
-    -webkit-box-shadow: inset 0 0 0.75rem rgba(0,0,0,0.35);
-    box-shadow: inset 0 0 0.75rem rgba(0,0,0,0.35);
-    background-color: #f9c72f;
 }
 html {
     zoom: 1;
@@ -293,7 +301,6 @@ body div {
 #footer {
     height: 3rem;
     overflow: hidden;
-    box-shadow: 0 0 1em rgba(0,0,0,0.5);
     z-index: 1000;
     position: fixed;
     width: 99.9%;
@@ -308,7 +315,7 @@ body div {
 #footer h4 {
     position: relative;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.225em;
 }
 @media screen and (min-width: 600px) {
     #header h1,
@@ -326,7 +333,6 @@ body div {
 #footer a {
     width: 3rem;
     height: 3rem;
-    background-color: #00a7e1;
     color: #fff;
 }
 #footer {
@@ -335,10 +341,9 @@ body div {
     left: 0;
     right: 0;
     width: 100%;
-    height: 3rem;
+    height: 4.063rem;
     color: #fff;
-    background-color: #00a7e1;
-    border-bottom: 5px solid #f9c72f;
+    background-color: #303030;
 }
 @media screen and (orientation: portrait) {
     section {
@@ -354,15 +359,18 @@ body div {
         width: 90%;
     }
     section > figure img {
-        max-width: 90%;
+        width: 100%;
     }
     section article {
         width: 100%;
         display: block;
         float: none;
     }
-    section article h1,
     section article p {
+        padding: 0.5rem 0.5rem 0;
+    }
+    section article h1 {
+        color: black;
         padding: 0.5rem 0.5rem 0;
     }
     @media screen and (min-width: 600px) {
@@ -386,7 +394,7 @@ body div {
         margin: 0 auto;
     }
     section > figure img {
-        max-width: 90%;
+        width: 100%;
     }
     section article {
         width: 55%;
@@ -404,21 +412,26 @@ body div {
         }
     }
 }
+#asideBottom {
+    background-color: #EBB012;
+    float: left;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
 aside {
     background-color: #000;
     width: 40%;
-    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px)
 {
-    aside
-    {
-    height: auto;
-    }
+
 }
 aside blockquote {
     padding: 0.5rem;
@@ -436,14 +449,12 @@ aside img {
 @media screen {
     @media (orientation: portrait) {
         aside img {
-            max-width: 33%;
             height:auto;
 
         }
     }
     @media (orientation: landscape) {
         aside img {
-            max-width: 33%;
             height:auto;
         }
     }
@@ -456,20 +467,21 @@ aside img {
 aside ul {
     font-size: 1em;
     padding: 0.5rem;
-    margin-bottom: 0.5em;
+    height: 100%;
     background-color: #bebcb5;
 }
 @media screen and (min-width: 600px) {
     aside ul {
-        font-size: 1.1em;
+        font-size: 1.075em;
+        height: calc(100% - 23.8em);
         padding: 2rem;
-        margin-bottom: 4em;
     }
 }
 aside ul h1 {
     color: #000;
 }
 aside .nav {
+    background-color: #F5E536;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -481,25 +493,52 @@ aside .nav {
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
+    width: 22.875rem;
     transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
-    background-color: #00a7e1;
+    background-color: #303030;
     z-index: 100;
 }
+@media screen and (max-width:450px) {
+    .center-content {
+        width:60%;
+    }
+    .left-content,
+    .right-content {
+        width: 30%;
+    }
+}
 .Blank-Image {
-    width: 44%;
+    width: 45%;
     float: left;
     clear: both;
-    margin: 0 0 2em 0;
+    margin: 0 1em 1em 0;
     border: 0px solid #ddd;
 }
 .Basic-Image {
     max-width: 45%;
-    max-height: 45%;
     margin: 0;
+    position: relative;
     border: none;
     float: left;
+}
+#asideImg
+{
+    width:100%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+#polAsideImg
+{
+    width:100%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+.zoomHolder
+{
+    position:relative;
 }
 @media screen and (min-width:600px) {
     .Basic-Image {
@@ -508,14 +547,13 @@ aside .nav {
     }
 }
 .Basic-Image img {
-    max-width: 100%;
-    max-height: 66%;
+    width: 100%;
     text-align: center;
     margin-bottom: 1em;
 }
+
 @media screen and (min-width:600px) {
     .Basic-Image img {
-        max-height: 66%;
     }
 }
 .Basic-Text-Frame {
@@ -551,10 +589,20 @@ aside .nav {
 }
 .left-content,
 .right-content {
-    width: 28%;
-    position: fixed;
+    width: 25%;
+    min-width:3rem;
+    min-height:4.063rem;
+    position: absolute;
     bottom: 0;
     text-align: center;
+    z-index:4
+}
+@media screen and (max-width: 450px)
+{
+    .left-content,
+    .right-content {
+    width:25%;
+    }
 }
 /*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
 .left-content {
@@ -629,6 +677,7 @@ span.drop-cap2 {
     span.drop-cap2 {
         float: left;
         display: inline;
+        padding-left:1rem;
     }
 }
 #closeImageZoom {
@@ -662,7 +711,6 @@ span.drop-cap2 {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-attachment: fixed;
 }
 #closeZoomImage {
     /*background-color rgba(0,0,0,0.9)*/
@@ -709,24 +757,32 @@ span.drop-cap2 {
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-    span
-        display: inline;
+}
+#indications
+{
+    font-weight:bold;
 }
 #footer #prev-icon,
 #footer #next-icon {
+    height: 100%;
+    width: 100%;
+    min-width: 3rem;
+    min-height; 4.063rem;
     border: none;
     text-align: center;
-    width: 100%;
-    position: relative;
-    background-position-x: 50%;
+    position: absolute;
 }
 #footer #next-icon {
-    background-image: url("assets/images/next-icon.svg");
-    background-color: transparent;
+    background-image: url("assets/images/2A1E423A.png");
+    background-position: center center;
+    background-size: auto 48px;
+    left: 0;
 }
 #footer #prev-icon {
-    background-image: url("assets/images/prev-icon.svg");
-    background-color: transparent;
+    background-image: url("assets/images/2A1E4239.png");
+    background-position: center center;
+    background-size: auto 48px;
+    left: 0;
 }
 .first #prev-icon {
     visibility: hidden;
@@ -757,15 +813,19 @@ span.drop-cap2 {
 #play-icon,
 .playing #play-icon {
     background-image: url("assets/images/play-icon.svg");
+    background-size: contain;
 }
 #autoplay-icon {
     background-image: url("assets/images/autoplay-icon.svg");
+    background-size: contain;
 }
 #restart-icon {
     background-image: url("assets/images/restart-icon.svg");
+    background-size: contain;
 }
 .playing #play-icon {
     background-image: url("assets/images/pause-icon.svg");
+    background-size: contain;
 }
 #sound-icon {
     background-image: url("assets/images/sound-icon.svg");

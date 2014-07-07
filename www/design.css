@@ -57,7 +57,7 @@ p.Headers {
 .side-scroll{
     overflow-x: scroll;
     overflow-y: scroll;
-    margin: 0 1rem
+    margin: 0;
 }
 p.Basic-Paragraph {
     color: #000000;
@@ -583,6 +583,7 @@ span.CharOverride-41 {
 }
 
 #table-4 {
+    align-self: inherit;
     border-collapse: collapse;
     line-height: 1em;
     min-width: 42em;

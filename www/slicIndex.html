@@ -87,7 +87,9 @@ dir {
 a {
     color: #00a7e1;
 }
-h1,
+h1 {
+   color: black;
+}
 h2,
 h3,
 h4 {
@@ -100,6 +102,16 @@ h4 {
 img {
     width: 100%;
     border: none;
+}
+span.zoomSpan
+{
+    z-index: 10;
+    background-image:url(assets/images/magnifyingGlass.png);
+    background-repeat:no-repeat;
+    width:40px; height:40px;
+    position:absolute;
+    left:15px;
+    top:15px;
 }
 h1,
 h2 {
@@ -116,15 +128,16 @@ h2 {
     left: 0;
     right: 0;
     position: fixed;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
     width: 100%;
     height: 3rem;
-    background: #000;
+    background: #00a7e1;
     color: #fff;
 }
 #header > * {
     top: 0;
 }
-#header #title {
+#header #titleBar {
     position: absolute;
     left: 6rem;
     top: 0;
@@ -135,7 +148,7 @@ h2 {
     vertical-align: middle;
 }
 @media screen and (min-width: 600px) {
-    #header #title {
+    #header #titleBar {
         left: 13rem;
     }
 }
@@ -260,12 +273,13 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
-    height: calc(100% - 6rem);
+    height: calc(100% - 7.063rem);
 }
 #inner {
     height: calc(100%);
     width: 81920px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: translate3d(0, 0, 0);
     /*transition: -webkit-transform 300ms;*/
 }
@@ -320,15 +334,9 @@ button,
 #sound-icon,
 #menu-icon,
 #font-size-icon {
-    -webkit-box-shadow: inset 0 0 0.25rem rgba(255,255,255,0.22);
-    box-shadow: inset 0 0 0.25rem rgba(255,255,255,0.22);
-    border: 1px solid rgba(128,128,128,0.5);
 }
 .active,
 .sound.autoplay #autoplay-icon {
-    -webkit-box-shadow: inset 0 0 0.75rem rgba(0,0,0,0.35);
-    box-shadow: inset 0 0 0.75rem rgba(0,0,0,0.35);
-    background-color: #f9c72f;
 }
 html {
     zoom: 1;
@@ -373,7 +381,6 @@ body div {
 #footer {
     height: 3rem;
     overflow: hidden;
-    box-shadow: 0 0 1em rgba(0,0,0,0.5);
     z-index: 1000;
     position: fixed;
     width: 99.9%;
@@ -388,7 +395,7 @@ body div {
 #footer h4 {
     position: relative;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.225em;
 }
 @media screen and (min-width: 600px) {
     #header h1,
@@ -406,7 +413,6 @@ body div {
 #footer a {
     width: 3rem;
     height: 3rem;
-    background-color: #00a7e1;
     color: #fff;
 }
 #footer {
@@ -415,10 +421,9 @@ body div {
     left: 0;
     right: 0;
     width: 100%;
-    height: 3rem;
+    height: 4.063rem;
     color: #fff;
-    background-color: #00a7e1;
-    border-bottom: 5px solid #f9c72f;
+    background-color: #303030;
 }
 @media screen and (orientation: portrait) {
     section {
@@ -434,15 +439,18 @@ body div {
         width: 90%;
     }
     section > figure img {
-        max-width: 90%;
+        width: 100%;
     }
     section article {
         width: 100%;
         display: block;
         float: none;
     }
-    section article h1,
     section article p {
+        padding: 0.5rem 0.5rem 0;
+    }
+    section article h1 {
+        color: black;
         padding: 0.5rem 0.5rem 0;
     }
     @media screen and (min-width: 600px) {
@@ -466,7 +474,7 @@ body div {
         margin: 0 auto;
     }
     section > figure img {
-        max-width: 90%;
+        width: 100%;
     }
     section article {
         width: 55%;
@@ -484,14 +492,26 @@ body div {
         }
     }
 }
+#asideBottom {
+    background-color: #EBB012;
+    float: left;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
 aside {
     background-color: #000;
     width: 40%;
-    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    padding-bottom: 3rem;
+}
+@media screen and (max-width: 600px)
+{
+
 }
 aside blockquote {
     padding: 0.5rem;
@@ -509,14 +529,12 @@ aside img {
 @media screen {
     @media (orientation: portrait) {
         aside img {
-            max-width: 33%;
             height:auto;
 
         }
     }
     @media (orientation: landscape) {
         aside img {
-            max-width: 33%;
             height:auto;
         }
     }
@@ -529,20 +547,21 @@ aside img {
 aside ul {
     font-size: 1em;
     padding: 0.5rem;
-    margin-bottom: 0.5em;
+    height: 100%;
     background-color: #bebcb5;
 }
 @media screen and (min-width: 600px) {
     aside ul {
-        font-size: 1.1em;
+        font-size: 1.075em;
+        height: calc(100% - 23.8em);
         padding: 2rem;
-        margin-bottom: 4em;
     }
 }
 aside ul h1 {
     color: #000;
 }
 aside .nav {
+    background-color: #F5E536;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -554,25 +573,52 @@ aside .nav {
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
+    width: 22.875rem;
     transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
-    background-color: #00a7e1;
+    background-color: #303030;
     z-index: 100;
 }
+@media screen and (max-width:450px) {
+    .center-content {
+        width:60%;
+    }
+    .left-content,
+    .right-content {
+        width: 30%;
+    }
+}
 .Blank-Image {
-    width: 44%;
+    width: 45%;
     float: left;
     clear: both;
-    margin: 0 0 2em 0;
+    margin: 0 1em 1em 0;
     border: 0px solid #ddd;
 }
 .Basic-Image {
     max-width: 45%;
-    max-height: 45%;
     margin: 0;
+    position: relative;
     border: none;
     float: left;
+}
+#asideImg
+{
+    width:100%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+#polAsideImg
+{
+    width:100%;
+    height:auto;
+    margin:0;
+    position:relative;
+}
+.zoomHolder
+{
+    position:relative;
 }
 @media screen and (min-width:600px) {
     .Basic-Image {
@@ -581,14 +627,13 @@ aside .nav {
     }
 }
 .Basic-Image img {
-    max-width: 100%;
-    max-height: 66%;
+    width: 100%;
     text-align: center;
     margin-bottom: 1em;
 }
+
 @media screen and (min-width:600px) {
     .Basic-Image img {
-        max-height: 66%;
     }
 }
 .Basic-Text-Frame {
@@ -601,10 +646,10 @@ aside .nav {
         clear: none;
     }
 }
-.Chart-Image{
-    max-width: 50%;
-    max-height: 50%;
-    align: center;
+.Chart-Image {
+}
+.Chart-Image img{
+    max-width: 45%;
 }
 .Title-Text-Frame {
     clear: both;
@@ -624,10 +669,20 @@ aside .nav {
 }
 .left-content,
 .right-content {
-    width: 28%;
-    position: fixed;
+    width: 25%;
+    min-width:3rem;
+    min-height:4.063rem;
+    position: absolute;
     bottom: 0;
     text-align: center;
+    z-index:4
+}
+@media screen and (max-width: 450px)
+{
+    .left-content,
+    .right-content {
+    width:25%;
+    }
 }
 /*-webkit-box-shadow inset 0 0 9px rgba(255,255,255,0.5)*/
 .left-content {
@@ -702,6 +757,7 @@ span.drop-cap2 {
     span.drop-cap2 {
         float: left;
         display: inline;
+        padding-left:1rem;
     }
 }
 #closeImageZoom {
@@ -735,7 +791,6 @@ span.drop-cap2 {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-attachment: fixed;
 }
 #closeZoomImage {
     /*background-color rgba(0,0,0,0.9)*/
@@ -782,24 +837,32 @@ span.drop-cap2 {
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-    span
-        display: inline;
+}
+#indications
+{
+    font-weight:bold;
 }
 #footer #prev-icon,
 #footer #next-icon {
+    height: 100%;
+    width: 100%;
+    min-width: 3rem;
+    min-height; 4.063rem;
     border: none;
     text-align: center;
-    width: 100%;
-    position: relative;
-    background-position-x: 50%;
+    position: absolute;
 }
 #footer #next-icon {
-    background-image: url("assets/images/next-icon.svg");
-    background-color: transparent;
+    background-image: url("assets/images/2A1E423A.png");
+    background-position: center center;
+    background-size: auto 48px;
+    left: 0;
 }
 #footer #prev-icon {
-    background-image: url("assets/images/prev-icon.svg");
-    background-color: transparent;
+    background-image: url("assets/images/2A1E4239.png");
+    background-position: center center;
+    background-size: auto 48px;
+    left: 0;
 }
 .first #prev-icon {
     visibility: hidden;
@@ -830,15 +893,19 @@ span.drop-cap2 {
 #play-icon,
 .playing #play-icon {
     background-image: url("assets/images/play-icon.svg");
+    background-size: contain;
 }
 #autoplay-icon {
     background-image: url("assets/images/autoplay-icon.svg");
+    background-size: contain;
 }
 #restart-icon {
     background-image: url("assets/images/restart-icon.svg");
+    background-size: contain;
 }
 .playing #play-icon {
     background-image: url("assets/images/pause-icon.svg");
+    background-size: contain;
 }
 #sound-icon {
     background-image: url("assets/images/sound-icon.svg");
@@ -934,7 +1001,7 @@ p.Headers {
 .side-scroll{
     overflow-x: scroll;
     overflow-y: scroll;
-    margin: 0 1rem
+    margin: 0;
 }
 p.Basic-Paragraph {
     color: #000000;
@@ -1460,6 +1527,7 @@ span.CharOverride-41 {
 }
 
 #table-4 {
+    align-self: inherit;
     border-collapse: collapse;
     line-height: 1em;
     min-width: 42em;
@@ -2019,7 +2087,7 @@ html body .ui-footer div.ui-slider-track.ui-body-a .ui-btn-active{
 
 
 span.CharOverride-2 {
-    font-size: 24px;
+    font-size: 26px;
     font-style: normal;
     font-weight: bold;
 }
@@ -2084,6 +2152,8 @@ html body .ui-header .ui-group-theme-a .ui-bar-inherit {
 .authors {
     vertical-align: top;
     padding: 15px 0 0 15px;
+    height: 100%;
+    bottom-border: 4px solid #FAD232;
 }
 .middle img, .authors {
     display: inline-block;
@@ -2437,8 +2507,7 @@ aside blockquote {
 }
 
 aside img {
-    margin: 0 0 -3px 0;
-    max-width: 33%
+    margin: 0 0 -2px 0;
 
 }
 
@@ -2450,7 +2519,7 @@ aside img {
     }
     @media (orientation: landscape) {
         aside img {
-            max-width: 33%;
+            max-width: 100%;
         }
     }
 }
@@ -2464,20 +2533,24 @@ aside img {
 aside ul {
     font-size: 1em;
     padding: 0.5rem;
-    margin-bottom: 0.5em;
-    background-color: #bebcb5;
+    background-color: #f3f2f0;
 }
 
 @media screen and (min-width: 600px) {
     aside ul {
-        font-size: 1.1em;
+        font-size: 1.075em;
+        height: calc(100%);
         padding: 2rem;
-        margin-bottom: 4em;
     }
 }
 
 aside ul h1 {
     color: #000;
+    font-size: 1.075em;
+}
+
+aside ul h2 {
+    font-size: 1.075em;
 }
 
 aside nav {
@@ -2490,17 +2563,15 @@ aside nav {
     position: absolute;
     top: 0;
     left: 50%;
+    height: 100%;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
     -transform: translate(-50%);
     text-align: center;
-    margin: 0 auto;
-    background-color: #00a7e1;
-    z-index: 100;
+    background-color: #303030;
+    z-index: 3;
 }
-
-
 
 #font-size-icon {
     width: 50%;
@@ -2534,7 +2605,14 @@ a {
     color: #00a7e1;
 }
 
-h1,
+h1 {
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.225em;
+}
 h2,
 h3,
 h4 {
@@ -2604,16 +2682,11 @@ button,
 #sound-icon,
 #menu-icon,
 #font-size-icon {
-    -webkit-box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
-    box-shadow: inset 0 0 0.25rem rgba(255, 255, 255, 0.22);
-    border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .active,
 .sound.autoplay #autoplay-icon {
-    -webkit-box-shadow: inset 0 0 0.75rem rgba(0, 0, 0, 0.35);
-    box-shadow: inset 0 0 0.75rem rgba(0, 0, 0, 0.35);
-    background-color: #f9c72f;
+    background-image: url(assets/images/navClickAuto.png)
 }
 
 .icon,
@@ -2632,7 +2705,7 @@ button,
 #menu-icon,
 #font-size-icon {
     display: inline-block;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -2667,6 +2740,8 @@ button,
 #sound-icon {
     opacity: 0;
     transition: opacity 0.1s;
+    height: 100%;
+    width: 4.2rem;
 }
 
 .sound .media-icon,
@@ -2675,23 +2750,24 @@ button,
 .sound #autoplay-icon,
 .sound #restart-icon {
     opacity: 1;
+    height: 100%;
 }
 
 #play-icon,
 .playing #play-icon {
-    background-image: url(assets/images/play-icon.svg);
+    background-image: url(assets/images/navPlay.png);
 }
 
 #autoplay-icon {
-    background-image: url(assets/images/autoplay-icon.svg);
+    background-image: url(assets/images/navAuto.png);
 }
 
 #restart-icon {
-    background-image: url(assets/images/restart-icon.svg);
+    background-image: url(assets/images/navRestart.png);
 }
 
 .playing #play-icon {
-    background-image: url(assets/images/pause-icon.svg);
+    background-image: url(assets/images/navPause.png);
 }
 
 #sound-icon {
@@ -2710,7 +2786,6 @@ button,
     overflow-x: hidden;
     overflow-y: hidden;
     width: 99.9%;
-    height: calc(full -bar-height -bar-height);
     position: absolute;
     left: 0;
 }
@@ -2724,11 +2799,8 @@ button,
 
 footer {
     bottom: 0;
-    background: #000;
-    color: #fff;
     background-color: #00a7e1;
     color: #fff;
-    border-bottom: 5px solid #f9c72f;
 }
 
 footer > * {
@@ -2760,6 +2832,34 @@ header #title {
 @media screen and (min-width: 600px) {
     header #title {
         left: 13rem;
+    }
+}
+@media screen and (max-width:450px){
+    .media-icon,
+    .sound .media-icon,
+    #play-icon,
+    .sound #play-icon,
+    #autoplay-icon,
+    .sound.autoplay #autoplay-icon,
+    .sound #autoplay-icon,
+    #restart-icon,
+    .sound #restart-icon,
+    .playing #play-icon,
+    #sound-icon {
+        opacity: 0;
+        transition: opacity 0.1s;
+        height: 100%;
+        width: 33%;
+    }
+
+    .sound .media-icon,
+    .sound #play-icon,
+    .sound.autoplay #autoplay-icon,
+    .sound #autoplay-icon,
+    .sound #restart-icon {
+        opacity: 1;
+        height: 100%;
+        width: 33%;
     }
 }
 
@@ -2844,7 +2944,7 @@ nav .inner button {
 
 nav .inner div {
     background-color: #000;
-}</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="utf-8"><script src="phonegap.js"></script><script src="js/index.js"></script></head><body class="medium"><div id="menu" class="nav">
+}</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="utf-8"><script src="phonegap.js"></script><script src="js/index.js"></script><script src="js/asideHeight.js"></script></head><body onresize="asideHeight()" class="medium"><div id="menu" class="nav">
     <div class="inner">
         <a href="index.html">Return to Library</a>
         <a href="#title">Title Page</a>
@@ -2874,8 +2974,56 @@ nav .inner div {
         <a href="#slic-technique-8">8. Final Confirmation</a>
         <a href="#ordering"> Ordering Information</a>
     </div>
-</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="title">SLIC Screw System</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/exit-icon.svg" onclick="unzoomImage()"></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content--><div id="title" data-role="page"><section><figure><img src="assets/images/SSTitle_Img1.jpg"></figure><article><h1>SLIC Screw System</h1><!--p The Acumed Scapholunate Intercarpal Screw (SLIC Screw) System has a cannulated cylinder-in-cylinder design for adjunct fixation of acute scapholunate instability, innovative instrumentation, and a specialized targeting guide designed to be used in correspondence with K-wires for anatomical reduction of the scaphoid and lunate carpals while allowing simplified targeting of the central third of the scaphoid and lunate in the lateral view.--><p class="Basic-Paragraph bottom-margin"><span class="body-copy">The Acumed Scapholunate Intercarpal Screw (SLIC Screw) System has a cannulated cylinder-in-cylinder design for adjunct fixation of acute scapholunate instability, innovative instrumentation, and a specialized targeting guide designed to be used in correspondence with K-wires for anatomical reduction of the scaphoid and lunate carpals while allowing simplified targeting of the central third of the scaphoid and lunate in the lateral view.</span></p><p style="font-size: 1.1em; text-align: center; margin: 0 auto;"><a href="http://go.acumed.net/slic-4">www.acumed.net</a></p></article></section><aside><blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br><br>We are dedicated to developing products, service methods, and approaches that improve patient care.</blockquote><img src="assets/images/SSTitle_Img2.jpg"><ul><li><h1>SLIC Screw Design Surgeon</h1><h2>William B. Geissler, M.D.</h2><br></li><li><h1>SL Targeting Guide
-Design Surgeon</h1><h2>Michael G. McNamara, M.D.</h2></li></ul><!--nav--><!--    h1 Contents--><!--    a(href='#about') About This Document--><!--    a(href='#treatment') Treatment Algorithm--><!--    a(href='#slic-targeting-1') SL Targeting Guide Surgical Technique--><!--    a(href='#technique') SLIC Screw Surgical Technique--><!--    a(href='#ordering') Ordering Information--></aside></div><div id="about" data-role="page">
+</div><div id="settings" class="nav"><div class="inner"><div>Font Size</div><button id="set-zoom-small">Small</button><button id="set-zoom-medium">Medium</button><button id="set-zoom-large">Large</button></div></div><div id="header"><button id="menu-icon" class="button"></button><div id="acumed-logo-icon"></div><div id="titleBar">SLIC Screw System</div><button id="font-size-icon" class="button"></button></div><div id="footer"><div class="left-content"><a id="prev-icon" class="button"></a></div><div class="center-content"><button id="play-icon" class="button"></button><button id="restart-icon" class="button"></button><button id="autoplay-icon" class="button"></button></div><div class="right-content"><a id="next-icon" class="button"></a></div></div><div id="smoke" onclick="unzoomImage()"><div id="image"><a id="closeZoomImage" onclick="unzoomImage()"><img src="assets/images/magnifyingGlassOut.png" onclick="unzoomImage()"/></a></div></div><div id="log"><div class="app"><h1>PhoneGap</h1><div id="deviceready" class="blink"><p class="event listening">Connecting to Device</p><p class="event received">Device is Ready</p></div></div><h1>log</h1></div><audio id="audio" src="" autoplay="autoplay" class="audio"></audio><div id="outer" class="outer"><div id="inner" class="inner"><!--extends layout--><!--block content-->
+<div id="title" data-role="page">
+
+    <section>
+        <figure id ="sectionId"><img src="assets/images/SSTitle_Img1.jpg"/></figure>
+        <article id ="sectionText"><h1>SLIC Screw System</h1>
+            <!--p The Acumed Scapholunate Intercarpal Screw (SLIC Screw) System has a cannulated cylinder-in-cylinder design for adjunct fixation of acute scapholunate instability, innovative instrumentation, and a specialized targeting guide designed to be used in correspondence with K-wires for anatomical reduction of the scaphoid and lunate carpals while allowing simplified targeting of the central third of the scaphoid and lunate in the lateral view.-->
+            <p class="Basic-Paragraph bottom-margin">
+                <span class="body-copy">
+                    The Acumed Scapholunate Intercarpal Screw (SLIC Screw) System has a cannulated cylinder-in-cylinder design for adjunct fixation of acute
+                    scapholunate instability, innovative instrumentation, and a specialized targeting guide designed to be used in correspondence with K-wires
+                    for anatomical reduction of the scaphoid and lunate carpals while allowing simplified targeting of the central third of the scaphoid and
+                    lunate in the lateral view.
+                </span>
+            </p>
+
+            <p style="font-size: 1.1em; text-align: center; margin: 0 auto;">
+                <a href="http://go.acumed.net/slic-4" target="_blank">www.acumed.net</a>
+            </p></article>
+    </section>
+
+    <aside id="asTitle">
+        <blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br/><br/>We are
+            dedicated to developing products, service methods, and approaches that improve patient care.
+        </blockquote>
+        <div id="asideImg">
+        <img src="assets/images/SSTitle_Img2.jpg"/>
+        </div>
+        <ul>
+            <li><h1>SLIC Screw Design Surgeon</h1>
+
+                <h2>William B. Geissler, M.D.</h2><br/></li>
+            <li><h1>SL Targeting Guide
+                Design Surgeon</h1>
+
+                <h2>Michael G. McNamara, M.D.</h2></li>
+
+        </ul>
+        <!--nav--><!--    h1 Contents--><!--    a(href='#about') About This Document-->
+        <!--    a(href='#treatment') Treatment Algorithm-->
+        <!--    a(href='#slic-targeting-1') SL Targeting Guide Surgical Technique-->
+        <!--    a(href='#technique') SLIC Screw Surgical Technique--><!--    a(href='#ordering') Ordering Information-->
+        <div id="asideBottom"></div>
+    </aside>
+
+    <script type="text/javascript">
+        asideHeight();
+    </script>
+
+</div><div id="about" data-role="page">
     <!--#include virtual="../../../../common/templates/header.html" -->
     <!--include virtual="../../../../common/templates/menu.html" -->
     <div role="main" id="main-content" class="content-wrapper" data-role="content">
@@ -2906,10 +3054,22 @@ Design Surgeon</h1><h2>Michael G. McNamara, M.D.</h2></li></ul><!--nav--><!--   
         the products described in these materials or the appropriateness for their own conditions should be directed to
         their own physician.<br/>
         <br/>
-        References:<br/>
-        1. Garcia-Elias et al. &quot;Three-Ligament Tenodesis for the Treatment of Scapholunate Dissociation: Indications and
-        Surgical Technique.&quot; JHS, 2006, 31(1), 125-134<br/>
-        2. Geissler. &quot;Arthroscopic Management of Scapholunate Instability.&quot; Chir Main, 2006, 25(1), 187-196.<br/>
+        <p class="Basic-Paragraph ParaOverride-11">
+        <span class="references">
+        References:
+        </span>
+        </p>
+        <p class="Basic-Paragraph bottom-margin">
+<span class="footer">
+        1. &#9;Garcia-Elias et al. &quot;Three-Ligament Tenodesis for the Treatment of Scapholunate Dissociation: Indications and
+        Surgical Technique.&quot; JHS, 2006, 31(1), 125-134
+    </span>
+        </p>
+        <p class="Basic-Paragraph bottom-margin">
+<span class="footer">
+        2. Geissler. &quot;Arthroscopic Management of Scapholunate Instability.&quot; Chir Main, 2006, 25(1), 187-196.
+    </span>
+        </p>
     </div>
     <!--#include virtual="../../../../common/templates/footer.html" -->
 </div><div id="treatment" data-role="page">
@@ -2929,6 +3089,7 @@ Design Surgeon</h1><h2>Michael G. McNamara, M.D.</h2></li></ul><!--nav--><!--   
     <p class="Basic-Paragraph bottom-margin"><span class="body-copy">Dr. William Geissler published a classification system for scapholunate instability. Per the Geissler Arthroscopic Classification, gapping is present in Grade&rsquo;s II and III.</span><span
             class="body-copy CharOverride-26">2</span></p>
 </div>
+<br/>
 <div class="side-scroll Full-Text-Frame">
     <table id="table-4">
         <colgroup>
@@ -3347,13 +3508,14 @@ Design Surgeon</h1><h2>Michael G. McNamara, M.D.</h2></li></ul><!--nav--><!--   
     <p class="Basic-Paragraph bottom-margin"><span
             class="body-copy-bold">Postoperative Rehabilitation Protocol</span><span class="CharOverride-7">: Per individual surgeon&rsquo;s discretion. Remove SLIC Screw at 6-9 months.</span>
     </p>
-
-    <p class="Basic-Paragraph bottom-margin"><span class="content-page-author">The SLIC Screw is </span><span
-            class="CharOverride-31">not</span><span
-            class="content-page-author"> recommended for the following stages:</span></p>
 </div>
+
+    <br/>
 <div name="ta-s5" id="ta-s5" class="Full-Text-Frame  bottom-margin">
-    <p class="Basic-Paragraph bottom-margin"><span class="content-page-author"><br/><br/></span><span class="content-page-author">Stage 5: </span><span
+    <br/>
+    <p class="Basic-Paragraph bottom-margin"><span class="content-page-author">The SLIC Screw is </span><span
+            class="CharOverride-31">not</span><span class="content-page-author"> recommended for the following stages:
+    <br/><br/></span><span class="content-page-author">Stage 5: </span><span
             class="CharOverride-7">Complete Non-repairable Scapholunate Ligament Injury with Irreducible Rotatory Malalignment But Normal Cartilage</span>
     </p>
 
@@ -3653,8 +3815,12 @@ PLACE SL TARGETING GUIDE <br/>ON WRIST</span>
         </div>
 
         <div class="Basic-Image">
-            <img src="assets/images/SST1_Page5_1_hi.jpg"><img src="assets/images/SST1_Page5_2_hi.jpg">
+            <img src="assets/images/SST1_Page5_1_hi.jpg">
+            <div class="zoomHolder">
+                <img src="assets/images/SST1_Page5_2_hi.jpg">
+            </div>
         </div>
+
         <div class="Basic-Text-Frame">
 
             <p class="Basic-Paragraph bottom-margin">
@@ -4158,7 +4324,9 @@ FINAL CONFIRMATION
 
         <div class="Basic-Image">
             <img src="assets/images/SST2_Page8_1_hi.jpg">
-            <img src="assets/images/SST2_Page8_2_hi.jpg">
+            <div class="zoomHolder">
+                <img src="assets/images/SST2_Page8_2_hi.jpg">
+            </div>
         </div>
 
         <div class="Basic-Text-Frame">
@@ -4730,6 +4898,7 @@ References
 }).call(this);
 // Generated by CoffeeScript 1.6.3
 (function() {
+
     this.initNav = function() {
         this.prevButton = get("prev-icon");
         this.nextButton = get("next-icon");
@@ -5176,6 +5345,11 @@ References
           if (e.target.tagName === "IMG") {
             zoomImage(e.target);
           }
+          if (e.target.className === "zoomSpan") {
+              var parent = e.target.parentNode;
+              var findImg = parent.getElementsByTagName("img")[0];
+              zoomImage(findImg);
+          }
       }
     }
     if (((_ref = e.target.tagName) === 'A') && e.target.hash) {
@@ -5213,22 +5387,44 @@ References
 }).call(this);
 // Generated by CoffeeScript 1.6.3
 (function() {
-  this.zoomEnabled = true;
 
-  this.zoomImage = function(target) {
-    var image, path, url;
-    if (this.zoomEnabled) {
-      image = all("#image")[0];
-      path = target.getAttribute("src");
-      url = 'url(' + path + ')';
-      image.style.backgroundImage = url;
-      return add("image-zoom");
+    var arrImages = document.getElementsByTagName("img");
+    var currentImage;
+    var src;
+
+    for(var i = 0; i<arrImages.length; i++)
+    {
+        currentImage = arrImages[i];
+        src = currentImage.src;
+
+        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1 && src.indexOf('magnifyingGlassOut.png') === -1)
+        {
+            {
+                var span = document.createElement("span");
+                span.className = "zoomSpan";
+                var parent = currentImage.parentNode;
+                parent.appendChild(span);
+            }
+
+        }
     }
-  };
 
-  this.unzoomImage = function() {
-    return remove("image-zoom");
-  };
+    this.zoomEnabled = true;
+
+    this.zoomImage = function(target) {
+        var image, path, url;
+        if (this.zoomEnabled) {
+            image = all("#image")[0];
+            path = target.getAttribute("src");
+            url = 'url(' + path + ')';
+            image.style.backgroundImage = url;
+            return add("image-zoom");
+        }
+    };
+
+    this.unzoomImage = function() {
+        return remove("image-zoom");
+    };
 
 }).call(this);
 // Generated by CoffeeScript 1.6.3

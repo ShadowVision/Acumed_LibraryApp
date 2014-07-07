@@ -20,17 +20,18 @@ html
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", charset="utf-8")
         script(src="phonegap.js")
         script(src="js/index.js")
-    body.medium
+        script(src="js/asideHeight.js")
+    body(class = "medium" onresize = "asideHeight()")
         include ../views/slicNav.html
         include ../views/settings
-        include ../views/header
+        include ../views/header.html
         include ../views/footer
-        include ../views/image
+        include ../views/image.html
         include ../views/log
         audio(id="audio" class="audio" src="" autoplay="autoplay")
         div#outer.outer
             div#inner.inner
-                include ../views/title
+                include ../views/title.html
                 include ../views/books/slic/content/about/index.html
                 include ../views/books/slic/content/treatment/index.html
                 include ../views/books/slic/content/presurgical/index.html

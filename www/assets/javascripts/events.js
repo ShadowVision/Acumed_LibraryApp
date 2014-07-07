@@ -45,6 +45,11 @@
           if (e.target.tagName === "IMG") {
             zoomImage(e.target);
           }
+          if (e.target.className === "zoomSpan") {
+              var parent = e.target.parentNode;
+              var findImg = parent.getElementsByTagName("img")[0];
+              zoomImage(findImg);
+          }
       }
     }
     if (((_ref = e.target.tagName) === 'A') && e.target.hash) {

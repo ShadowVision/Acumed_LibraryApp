@@ -1,8 +1,9 @@
 <!--extends layout--><!--block content-->
 <div id="title" data-role="page">
+
     <section>
-        <figure><img src="assets/images/SSTitle_Img1.jpg"/></figure>
-        <article><h1>SLIC Screw System</h1>
+        <figure id ="sectionId"><img src="assets/images/SSTitle_Img1.jpg"/></figure>
+        <article id ="sectionText"><h1>SLIC Screw System</h1>
             <!--p The Acumed Scapholunate Intercarpal Screw (SLIC Screw) System has a cannulated cylinder-in-cylinder design for adjunct fixation of acute scapholunate instability, innovative instrumentation, and a specialized targeting guide designed to be used in correspondence with K-wires for anatomical reduction of the scaphoid and lunate carpals while allowing simplified targeting of the central third of the scaphoid and lunate in the lateral view.-->
             <p class="Basic-Paragraph bottom-margin">
                 <span class="body-copy">
@@ -13,14 +14,18 @@
                 </span>
             </p>
 
-            <p style="font-size: 1.1em; text-align: center; margin: 0 auto;"><a href="http://go.acumed.net/slic-4">www.acumed.net</a>
+            <p style="font-size: 1.1em; text-align: center; margin: 0 auto;">
+                <a href="http://go.acumed.net/slic-4" target="_blank">www.acumed.net</a>
             </p></article>
     </section>
-    <aside>
+
+    <aside id="asTitle">
         <blockquote>Acumed&reg; is a global leader of innovative orthopaedic and medical solutions.<br/><br/>We are
             dedicated to developing products, service methods, and approaches that improve patient care.
         </blockquote>
+        <div id="asideImg">
         <img src="assets/images/SSTitle_Img2.jpg"/>
+        </div>
         <ul>
             <li><h1>SLIC Screw Design Surgeon</h1>
 
@@ -29,10 +34,17 @@
                 Design Surgeon</h1>
 
                 <h2>Michael G. McNamara, M.D.</h2></li>
+
         </ul>
         <!--nav--><!--    h1 Contents--><!--    a(href='#about') About This Document-->
         <!--    a(href='#treatment') Treatment Algorithm-->
         <!--    a(href='#slic-targeting-1') SL Targeting Guide Surgical Technique-->
         <!--    a(href='#technique') SLIC Screw Surgical Technique--><!--    a(href='#ordering') Ordering Information-->
+        <div id="asideBottom"></div>
     </aside>
+
+    <script type="text/javascript">
+        asideHeight();
+    </script>
+
 </div>
