@@ -37,7 +37,6 @@ function asideHeight () {
         asideEle.style.height = "auto";
     }
 
-
     if(document.getElementById("polAsideImg"))
     {
         asideEle.style.height = "auto";

@@ -815,8 +815,8 @@ span.drop-cap2 {
     left: 0;
 }
 #closeZoomImage img {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 }
 #image {
     visibility: hidden;
@@ -2952,7 +2952,7 @@ nav .inner button {
 
 nav .inner div {
     background-color: #000;
-}</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="utf-8"><script src="js/index.js"></script><script src="phonegap.js"></script><script src="js/asideHeight.js"></script></head><body onresize="asideHeight()" class="medium"><div id="menu" class="nav">
+}</style><meta name="apple-mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="utf-8"><script src="js/index.js"></script><script src="phonegap.js"></script><script src="js/asideHeight.js"></script></head>"setInterval(function(){alert('Hello')},3000)<body onresize="asideHeight()" class="medium"><div id="menu" class="nav">
     <div class="inner">
         <a href="index.html">Return to Library</a>
         <a href="#title">Introducing The System</a>
@@ -7294,6 +7294,9 @@ visit acumed.net.
               var findImg = parent.getElementsByTagName("img")[0];
               zoomImage(findImg);
           }
+              log(document.getElementById("asTitle").scrollHeight);
+              log(document.getElementById("title").scrollHeight);
+              log(document.getElementById("asTitle").offsetHeight);
       }
     }
     if (((_ref = e.target.tagName) === 'A') && e.target.hash) {

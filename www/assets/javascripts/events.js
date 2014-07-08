@@ -50,6 +50,9 @@
               var findImg = parent.getElementsByTagName("img")[0];
               zoomImage(findImg);
           }
+              log(document.getElementById("asTitle").scrollHeight);
+              log(document.getElementById("title").scrollHeight);
+              log(document.getElementById("asTitle").offsetHeight);
       }
     }
     if (((_ref = e.target.tagName) === 'A') && e.target.hash) {
