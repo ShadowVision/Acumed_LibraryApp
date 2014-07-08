@@ -293,23 +293,6 @@ button,
     text-transform: uppercase;
 }
 
-.tangible,
-.icon,
-.edge-icon,
-.media-icon,
-.sound .media-icon,
-#play-icon,
-.sound #play-icon,
-#autoplay-icon,
-.sound.autoplay #autoplay-icon,
-.sound #autoplay-icon,
-#restart-icon,
-.sound #restart-icon,
-.playing #play-icon,
-#sound-icon,
-#menu-icon,
-#font-size-icon {
-}
 
 .active,
 .sound.autoplay #autoplay-icon {
@@ -368,7 +351,7 @@ button,
     opacity: 0;
     transition: opacity 0.1s;
     height: 100%;
-    width: 4.2rem;
+    width: 3.8rem;
 }
 
 .sound .media-icon,

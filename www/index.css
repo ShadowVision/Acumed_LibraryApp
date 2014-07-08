@@ -207,7 +207,7 @@ body {
     height: calc(100%);
     width: 81920px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     transition: translate3d(0, 0, 0);
     /*transition: -webkit-transform 300ms;*/
 }
@@ -357,7 +357,7 @@ body div {
     section {
         width: 60%;
         float: left;
-        padding-bottom: 4rem;
+
     }
     section > figure {
         max-height: 50%;
@@ -392,7 +392,6 @@ body div {
     section {
         width: 60%;
         float: left;
-        padding-bottom: 4rem;
     }
     section > figure {
         width: 35%;
@@ -433,8 +432,9 @@ body div {
     z-index: 1;
 }
 aside {
-    background-color: #000;
+    background-color: #f3f2f0;
     width: 40%;
+    padding-bottom: 3rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -476,7 +476,7 @@ aside img {
 }
 aside ul {
     font-size: 1em;
-    padding: 0.5rem;
+    padding: 2em;
     height: 100%;
     background-color: #bebcb5;
 }
@@ -489,6 +489,11 @@ aside ul {
 }
 aside ul h1 {
     color: #000;
+}
+@media screen and (max-width: 599px) {
+    aside li h1 {
+        padding-bottom: 0.5em;
+    }
 }
 aside .nav {
     background-color: #F5E536;
