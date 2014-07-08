@@ -421,6 +421,8 @@ body div {
     }
 }
 #asideBottom {
+    margin-top: 3rem;
+    margin-right: 0;
     background-color: #EBB012;
     float: left;
     width: 100%;

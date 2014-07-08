@@ -21,7 +21,7 @@ html
         script(src="phonegap.js")
         script(src="js/index.js")
         script(src="js/asideHeight.js")
-    body(class = "medium" onresize = "asideHeight()")
+    body(class = "medium" onload="asideHeight()" onresize = "asideHeight()")
         include ../views/slicNav.html
         include ../views/settings
         include ../views/header.html

@@ -22,7 +22,7 @@ html
         script(src="phonegap.js")
         script(src="js/asideHeight.js")
     "setInterval(function(){alert('Hello')},3000)
-    body(class = "medium" onresize = "asideHeight()")
+    body(class = "medium" onload = "asideHeight()" onresize = "asideHeight()")
         include ../views/polNav.html
         include ../views/settings
         include ../views/polHeader.html
