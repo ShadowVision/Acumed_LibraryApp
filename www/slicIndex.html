@@ -511,6 +511,18 @@ body div {
     right: 0;
     z-index: 1;
 }
+
+#treatmentTable
+{
+    position:relative;
+}
+
+#treatmentImg
+{
+    max-height:471px;
+    max-width:1102px;
+    height:auto;
+}
 aside {
     background-color: #f3f2f0;
     width: 40%;
@@ -3085,9 +3097,9 @@ nav .inner div {
     </p>
 
     <p class="Basic-Paragraph bottom-margin"><span class="body-copy">Dr. William Geissler published a classification system for scapholunate instability. Per the Geissler Arthroscopic Classification, gapping is present in Grade&rsquo;s II and III.</span><span
-            class="body-copy CharOverride-26">2</span></p>
+            class="body-copy CharOverride-26">2</span></p><br/>
 </div>
-<br/>
+    <!--
 <div class="side-scroll Full-Text-Frame">
     <table id="table-4">
         <colgroup>
@@ -3250,10 +3262,12 @@ nav .inner div {
         </tr>
         </tbody>
     </table>
-        <p class="Basic-Paragraph bottom-margin"><span class="CharOverride-20">Garcia-Elias et al, Three-Ligament Tenodesis for the Treatment of Scapholunate Dissociation: Indications and Surgical Technique, <br/>JHS, 2006, 31(1), 125-134</span>
-        </p>
+    -->
+<div id = "treatmentTable">
+    <img id="treatmentImg" src="assets/images/SLIC_TreatmentAlgorithm_TableCapture.png"/>
 </div>
-
+<p class="Basic-Paragraph bottom-margin"><span class="CharOverride-20">Garcia-Elias et al, Three-Ligament Tenodesis for the Treatment of Scapholunate Dissociation: Indications and Surgical Technique, <br/>JHS, 2006, 31(1), 125-134</span>
+</p>
 <div name="ta-s1"  id="ta-s1" class="Full-Text-Frame">
     <p class="Basic-Paragraph bottom-margin"><span class="content-page-author"><br/><br/></span><span class="content-page-author">Stage 1: </span><span
             class="CharOverride-7">Partial Scapholunate Ligament injury</span></p>
@@ -3616,6 +3630,7 @@ nav .inner div {
     </p>
 </div>
 </div>
+
 
 <!--#include virtual="../../../../common/templates/footer.html" -->
 
@@ -5398,7 +5413,7 @@ References
         currentImage = arrImages[i];
         src = currentImage.src;
 
-        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1 && src.indexOf('magnifyingGlassOut.png') === -1)
+        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1 && src.indexOf('magnifyingGlassOut.png') === -1 && src.indexOf("SLIC_TreatmentAlgorithm_TableCapture.png") === -1)
         {
             {
                 var span = document.createElement("span");

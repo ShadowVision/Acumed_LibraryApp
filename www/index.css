@@ -431,6 +431,18 @@ body div {
     right: 0;
     z-index: 1;
 }
+
+#treatmentTable
+{
+    position:relative;
+}
+
+#treatmentImg
+{
+    max-height:471px;
+    max-width:1102px;
+    height:auto;
+}
 aside {
     background-color: #f3f2f0;
     width: 40%;
