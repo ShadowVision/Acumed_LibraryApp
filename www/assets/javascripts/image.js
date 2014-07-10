@@ -10,7 +10,7 @@
         currentImage = arrImages[i];
         src = currentImage.src;
 
-        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.svg') === -1 && src.indexOf('magnifyingGlassOut.png') === -1)
+        if(src.indexOf("st1-04Chart-hi.jpg") === -1 && src.indexOf('.png') === -1 && src.indexOf('magnifyingGlassOut.png') === -1)
         {
             {
                 var span = document.createElement("span");

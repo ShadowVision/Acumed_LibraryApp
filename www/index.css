@@ -117,13 +117,13 @@ body.menu #menu.nav {
     display: block;
 }
 #set-zoom-small {
-    background-image: url("assets/images/font-small-icon.svg");
+    background-image: url("assets/images/font-small-icon.png");
 }
 #set-zoom-medium {
-    background-image: url("assets/images/font-medium-icon.svg");
+    background-image: url("assets/images/font-medium-icon.png");
 }
 #set-zoom-large {
-    background-image: url("assets/images/font-large-icon.svg");
+    background-image: url("assets/images/font-large-icon.png");
 }
 .small #settings.nav .inner #set-zoom-small {
     background-color: #999;
@@ -839,32 +839,32 @@ span.drop-cap2 {
 }
 #play-icon,
 .playing #play-icon {
-    background-image: url("assets/images/play-icon.svg");
+    background-image: url("assets/images/play-icon.png");
     background-size: contain;
 }
 #autoplay-icon {
-    background-image: url("assets/images/autoplay-icon.svg");
+    background-image: url("assets/images/autoplay-icon.png");
     background-size: contain;
 }
 #restart-icon {
-    background-image: url("assets/images/restart-icon.svg");
+    background-image: url("assets/images/restart-icon.png");
     background-size: contain;
 }
 .playing #play-icon {
-    background-image: url("assets/images/pause-icon.svg");
+    background-image: url("assets/images/pause-icon.png");
     background-size: contain;
 }
 #sound-icon {
-    background-image: url("assets/images/sound-icon.svg");
+    background-image: url("assets/images/sound-icon.png");
 }
 #menu-icon {
-    background-image: url("assets/images/menu-icon.svg");
+    background-image: url("assets/images/menu-icon.png");
     position: absolute;
     top: 0;
     left: 0;
 }
 #font-size-icon {
-    background-image: url("assets/images/fontsize-icon.svg");
+    background-image: url("assets/images/fontsize-icon.png");
     position: absolute;
     top: 0;
     right: 0;
@@ -875,7 +875,7 @@ span.drop-cap2 {
     left: 3rem;
     height: 3rem;
     width: 3rem;
-    background-image: url("assets/images/acumed-reticle-icon.svg");
+    background-image: url("assets/images/acumed-reticle-icon.png");
     background-size: contain;
     background-repeat: no-repeat;
     color: #ffd700;
@@ -884,7 +884,7 @@ span.drop-cap2 {
     #acumed-logo-icon {
         width: 100%;
         left: 0;
-        background-image: url("assets/images/acumed-logo-icon.svg");
+        background-image: url("assets/images/acumed-logo-icon.png");
         text-align: left;
         margin-left: 3rem;
         line-height: 3rem;

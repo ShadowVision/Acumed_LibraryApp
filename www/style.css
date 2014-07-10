@@ -381,15 +381,15 @@ button,
 }
 
 #sound-icon {
-    background-image: url(assets/images/sound-icon.svg);
+    background-image: url(assets/images/sound-icon.png);
 }
 
 #menu-icon {
-    background-image: url(assets/images/menu-icon.svg);
+    background-image: url(assets/images/menu-icon.png);
 }
 
 #font-size-icon {
-    background-image: url(assets/images/fontsize-icon.svg);
+    background-image: url(assets/images/fontsize-icon.png);
 }
 
 #outer {
@@ -505,15 +505,15 @@ header #title {
 }
 
 #set-zoom-small {
-    background-image: url(assets/images/font-small-icon.svg);
+    background-image: url(assets/images/font-small-icon.png);
 }
 
 #set-zoom-medium {
-    background-image: url(assets/images/font-medium-icon.svg);
+    background-image: url(assets/images/font-medium-icon.png);
 }
 
 #set-zoom-large {
-    background-image: url(assets/images/font-large-icon.svg);
+    background-image: url(assets/images/font-large-icon.png);
 }
 
 nav {
