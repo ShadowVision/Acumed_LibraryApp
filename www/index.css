@@ -28,7 +28,8 @@ span.zoomSpan
     z-index: 10;
     background-image:url(assets/images/magnifyingGlass.png);
     background-repeat:no-repeat;
-    width:40px; height:40px;
+    width:40px;
+    height:40px;
     position:absolute;
     left:15px;
     top:15px;
@@ -38,6 +39,7 @@ span.zoomSpan
     span.zoomSpan
     {
         left: 0px;
+        cursor: pointer;
         top: 0px;
     }
 }
