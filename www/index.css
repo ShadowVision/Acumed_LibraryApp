@@ -28,6 +28,7 @@ span.zoomSpan
     z-index: 10;
     background-image:url(assets/images/magnifyingGlass.png);
     background-repeat:no-repeat;
+    cursor: pointer;
     width:40px;
     height:40px;
     position:absolute;
@@ -756,6 +757,7 @@ span.drop-cap2 {
     left: 0;
 }
 #closeZoomImage img {
+    cursor: pointer;
     width: 40px;
     height: 40px;
 }
