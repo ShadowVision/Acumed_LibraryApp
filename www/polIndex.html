@@ -113,6 +113,7 @@ span.zoomSpan
     position:absolute;
     left:15px;
     top:15px;
+    cursor:pointer;
 }
 @media screen and (max-width: 599px)
 {
@@ -838,6 +839,7 @@ span.drop-cap2 {
 #closeZoomImage img {
     width: 40px;
     height: 40px;
+    cursor:pointer;
 }
 #image {
     visibility: hidden;
@@ -7293,7 +7295,7 @@ visit acumed.net.
           if (e.target.tagName === "IMG") {
             zoomImage(e.target);
           }
-          if (e.target.className === "zoomSpan") {
+          if (e.target.className == "zoomSpan" || e.touches[0].target.className == "zoomSpan") {
               var parent = e.target.parentNode;
               var findImg = parent.getElementsByTagName("img")[0];
               zoomImage(findImg);
