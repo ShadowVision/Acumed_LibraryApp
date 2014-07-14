@@ -7291,7 +7291,7 @@ visit acumed.net.
           if (e.target.tagName === "IMG") {
             zoomImage(e.target);
           }
-          if (e.target.className === "zoomSpan") {
+          if (e.target.className === "zoomSpan" || e.touches[0].target.className === "zoomSpan") {
               var parent = e.target.parentNode;
               var findImg = parent.getElementsByTagName("img")[0];
               zoomImage(findImg);
