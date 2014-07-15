@@ -14,7 +14,7 @@
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        Shadow Vision Team
+        ShadowVision Team
     </author>
 
 
@@ -38,6 +38,11 @@
         <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </gap:config-file>
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+        <false/>
+    </gap:config-file>
+
     <preference name="DisallowOverscroll"         value="true" />
     <preference name="webviewbounce"              value="false"/>
     <preference name="phonegap-version"           value="3.3.0" />
