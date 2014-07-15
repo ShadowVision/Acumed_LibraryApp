@@ -459,7 +459,7 @@ header #title {
         opacity: 0;
         transition: opacity 0.1s;
         height: 100%;
-        width: 33%;
+        width: 32%;
     }
 
     .sound .media-icon,
@@ -469,7 +469,7 @@ header #title {
     .sound #restart-icon {
         opacity: 1;
         height: 100%;
-        width: 33%;
+        width: 32%;
     }
 }
 
