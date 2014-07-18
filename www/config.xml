@@ -15,7 +15,7 @@
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        Shadow Vision Team
+        ShadowVision Team
     </author>
 
 
@@ -57,8 +57,9 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <!-- Plugins -->
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+
     <!-- Core plugins -->
     <feature name="Media">
         <param name="android-package" value="org.apache.cordova.media.AudioHandler"/>
