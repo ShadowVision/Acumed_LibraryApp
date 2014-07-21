@@ -27,9 +27,9 @@ function asideHeight () {
     var asideEle;
     asideEle = document.getElementById("asTitle");
     viewPortHeight = document.getElementById("title").offsetHeight;
-    log("viewPortHeight: " + viewPortHeight);
+    //log("viewPortHeight: " + viewPortHeight);
     asHeight = document.getElementById("asTitle").scrollHeight;
-    log("Aside scrollHeight: " + asHeight);
+    //log("Aside scrollHeight: " + asHeight);
     if(asHeight <= viewPortHeight) {
         asideEle.style.height = "100%";
     }
